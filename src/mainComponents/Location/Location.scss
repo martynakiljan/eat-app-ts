@@ -1,0 +1,25 @@
+@import "../../styles/all.scss";
+
+.location {
+    @include content-width();
+
+    @include md-min {
+        display: flex;
+    }
+}
+
+.location__title {
+    margin-bottom: 20px;
+}
+
+.location__email {
+    color: $color-primary;
+}
+
+.location__text {
+    margin-right: 30px;
+}
+
+.location__address-wrapper {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,216 @@
+$layout-breakpoints: (
+    xxs: 400px,
+    xs: 480px,
+    sm: 768px,
+    md: 992px,
+    lg: 1025px,
+    xl: 1330px,
+);
+$is-web: true;
+
+
+@mixin content-width {
+
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @include md-min() {
+        padding: 0 50px;
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+
+@mixin xs-min($print: false) {
+    @include mq-min-print(map-get($layout-breakpoints, xs), $print) {
+        @if $is-web ==true {
+            @content;
+        }
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-min($print) {
+
+  }
+*/
+@mixin sm-min($print: false) {
+    @include mq-min-print(map-get($layout-breakpoints, sm), $print) {
+        @if $is-web ==true {
+            @content;
+        }
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-min($print) {
+
+  }
+*/
+@mixin md-min($print: false) {
+    @include mq-min-print(map-get($layout-breakpoints, md), $print) {
+        @if $is-web ==true {
+            @content;
+        }
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-min($print) {
+
+  }
+*/
+@mixin lg-min($print: false) {
+    @include mq-min-print(map-get($layout-breakpoints, lg), $print) {
+        @if $is-web ==true {
+            @content;
+        }
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+@mixin xl-min($print: false) {
+    @include mq-min-print(map-get($layout-breakpoints, xl), $print) {
+        @if $is-web ==true {
+            @content;
+        }
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xs-max($print) {
+
+  }
+*/
+@mixin xs-max($print: false) {
+    @include mq-max-print(map-get($layout-breakpoints, xs), $print) {
+        @content;
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-max($print) {
+
+  }
+*/
+@mixin sm-max($print: false) {
+    @include mq-max-print(map-get($layout-breakpoints, sm), $print) {
+        @content;
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-max($print) {
+
+  }
+*/
+@mixin md-max($print: false) {
+    @include mq-max-print(map-get($layout-breakpoints, md), $print) {
+        @content;
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-max($print) {
+
+  }
+*/
+@mixin lg-max($print: false) {
+    @include mq-max-print(map-get($layout-breakpoints, lg), $print) {
+        @content;
+    }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-max($print) {
+
+  }
+*/
+@mixin xl-max($print: false) {
+    @include mq-max-print(map-get($layout-breakpoints, xl), $print) {
+        @content;
+    }
+}
+
+/*
+  Usage:
+  since word cannot work with media print, the files set the is-not-word variable globally,
+  this will ensure that all print things are added in print in pdf.css and print. and all
+  word things are not added within print media query.
+  @include print {
+
+  }
+*/
+
+@mixin print($is-pdf: $is-pdf) {
+    @if $is-pdf ==true {
+        @media print {
+            @content;
+        }
+    }
+}
+
+/*
+  Helpers do not use
+*/
+@mixin mq-min-print($breakpoint, $print: false) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+
+    @if $print ==true {
+        @media print {
+            @content;
+        }
+    }
+}
+
+@mixin mq-max-print($breakpoint, $print: false) {
+    @media (max-width: '#{$breakpoint - 1}') {
+        @content;
+    }
+
+    @if $print ==true {
+        @media print {
+            @content;
+        }
+    }
+}

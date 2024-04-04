@@ -1,0 +1,66 @@
+@import "../../styles/all.scss";
+
+
+.navfood__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include md-min {
+        margin: 10px 50px;
+        justify-content: flex-start;
+    }
+
+}
+
+.navfood__link {
+    text-decoration: none;
+    list-style: none;
+    border: 1px solid $color-primary;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin: 10px;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+
+
+
+    a {
+        text-decoration: none;
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+    .active {
+        color: $color-main;
+    }
+}
+
+.navfood__select-input {
+    background-color: transparent;
+    border: none;
+}
+
+.navfood__select-label {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.navfood__select {
+    margin: 0 10px;
+    padding: 5px 15px;
+    background-color: transparent;
+    font-size: 12px;
+
+}
+
+.nav__logo {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,24 @@
+@import "../../styles/all.scss";
+
+
+.footer__inner {
+    height: 3vh;
+    border-top: 0.5px solid $color-main;
+    width: 100%;
+}
+
+.footer__copyright {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    color: $color-dark-blue;
+    align-items: center;
+    font-size: 12px;
+}
+
+.svg-inline--fa.fa-copyright {
+    height: 12px;
+    width: 12px;
+    color: $color-dark-blue;
+    padding: 0 5px;
+}

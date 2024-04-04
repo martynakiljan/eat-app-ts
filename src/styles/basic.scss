@@ -1,0 +1,20 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+body {
+    background-color: $color-bg;
+}
+
+.eat-app {
+    display: flex;
+    flex-direction: column;
+
+    @include md-min {
+        flex-direction: row;
+    }
+
+}
+
+.eat-app__col2 {
+    width: 100%;
+}

@@ -1,0 +1,59 @@
+@import "../../styles/all.scss";
+
+.form-order__title {
+    border-top: 2px solid $color-primary;
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.form-order {
+
+    margin-left: 0;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.form-order__group {
+    margin-bottom: 20px;
+}
+
+.form-order__label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-order__input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #BBE2EC;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-order__button {
+    background-color: #0D9276;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-order__error {
+    color: #880808;
+    font-size: 10px;
+}
+
+.order__info--pay {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.spinner__text {
+    font-size: 12px;
+    padding: 10px 0;
+}

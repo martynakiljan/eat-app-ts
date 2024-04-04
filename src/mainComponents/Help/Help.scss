@@ -1,0 +1,21 @@
+@import "../../styles/all.scss";
+
+.help-wrapper {
+    @include content-width();
+
+    @include md-min {
+        max-width: 70%;
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+.form__link {
+    font-weight: bold;
+    color: $color-primary;
+    text-decoration: solid;
+}
+
+.help__question {
+    margin-top: 50px;
+}

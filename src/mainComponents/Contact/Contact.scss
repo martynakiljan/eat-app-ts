@@ -1,0 +1,56 @@
+@import "../../styles/all.scss";
+
+.form {
+    @include content-width();
+    padding-bottom: 20px;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    border: 2px solid $color-main;
+    background-color: transparent;
+    margin: 15px 0;
+    min-width: 200px;
+    padding: 5px 10px;
+
+    &[aria-invalid="true"] {
+        border: 2px solid $color-error;
+    }
+}
+
+.form__button {
+    background-color: $color-primary;
+    color: $color-bg;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.error {
+    color: $color-error;
+    padding-bottom: 15px;
+}
+
+.form-correct {
+    color: $color-primary;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.form-not-correct {
+    font-weight: bold;
+    color: $color-error;
+    margin-top: 15px;
+}
