@@ -6,7 +6,7 @@ const Location = () => {
   return (
     <div className="location">
       <div className="location__text">
-        <h1 className="location__title">you will find us here</h1>
+        <h1 className="location__title">You will find us here</h1>
         <div className="location__address-wrapper">
           <p className="location__address">Ankerstreet 45/203</p>
           <p className="location__address">Zurich 8004</p>

@@ -26,6 +26,7 @@ type ContextType = {
     itemPrice: number
   ) => void;
   totalPrice: number;
+  emptyBasket: boolean;
   removeFromBasket: (itemPrice: number, itemId: number) => void;
   handleDeliveryOptionChange: (value: string) => void;
   deliveryOption: string;
@@ -48,8 +49,12 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   const [totalPrice, setTotalPrice] = useState<number>(0);
   let deliveryPrice = 5.9;
 
+  // basket is empty //
+  const [emptyBasket, setIsEmpty] = useState<boolean>(false);
+
   useEffect(() => {
     if (basket.length === 0) {
+      setIsEmpty(true);
       setTotalPrice(0);
     }
   }, [basket]);
@@ -66,6 +71,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   //add to Basket //
   const addToBasket = (id: number, name: string, price: number) => {
     const existingItem = basket.find((item) => item.id === id);
+    setIsEmpty(false);
 
     if (existingItem) {
       increaseInBasket(id, existingItem.amount);
@@ -169,6 +175,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
         removeFromBasket,
         deliveryOption,
         handleDeliveryOptionChange,
+        emptyBasket,
       }}
     >
       {children}

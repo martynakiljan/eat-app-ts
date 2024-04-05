@@ -1,194 +1,187 @@
 @import "../../styles/all.scss";
 
-
 .home__header {
-    background-image: url(../../images/header.jpg);
-    mask-mode: alpha;
-    width: 100%;
-    position: relative;
-    height: 40vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-
+  background-image: url(../../images/header.jpg);
+  mask-mode: alpha;
+  width: 100%;
+  position: relative;
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .home__header--mask {
-    background-color: black;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    left: 0;
-    right: 0;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
 }
 
 .home__top {
-    @include content-width();
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    padding: 20px;
+  @include content-width();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  padding: 20px;
 
-    @include md-min {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  @include md-min {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .home__input {
-    z-index: 12;
-    display: flex;
-    align-items: center;
-    font-family: "Exo", sans-serif;
-
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  font-family: "Exo", sans-serif;
 }
 
 input::placeholder {
-    color: $color-bg;
-    opacity: 1;
+  color: $color-bg;
+  opacity: 1;
 }
 
 input:focus {
-    border-color: $color-primary;
-    outline: 0;
+  border-color: $color-primary;
+  outline: 0;
 }
 
 .home__input--input {
-    z-index: 12;
-    background-color: transparent;
-    border: 1px solid $color-bg;
-    height: 30px;
-    padding: 10px 20px;
+  z-index: 12;
+  background-color: transparent;
+  border: 1px solid $color-bg;
+  height: 30px;
+  padding: 10px 20px;
 
-    @include md-min {
-        padding: 20px 30px;
-    }
-
+  @include md-min {
+    padding: 20px 30px;
+  }
 }
 
 svg.fa-magnifying-glass {
-    z-index: 12;
-    color: $color-bg;
-    padding: 0 10px;
-    width: 20px;
-    height: 20px;
+  z-index: 12;
+  color: $color-bg;
+  padding: 0 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .home__nav {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .home__title {
-    z-index: 12;
-    font-size: 40px;
-    color: $color-bg;
-    font-family: "Shadows Into Light", cursive;
-    font-weight: 400;
-    font-style: normal;
-    padding: 10px 0;
+  z-index: 12;
+  font-size: 40px;
+  color: $color-bg;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 0;
 
-    @include md-min {
-        padding: 0;
-        font-size: 60px;
-    }
+  @include md-min {
+    padding: 0;
+    font-size: 60px;
+  }
 }
 
 .shopping__basket {
-    z-index: 11;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
 
-    @include md-min {
-        padding: 0;
-    }
+  @include md-min {
+    padding: 0;
+  }
 }
 
 .shopping__button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
 }
 
 .shopping__price {
-    color: $color-bg;
-    font-weight: 600;
-    font-size: 12px;
+  color: $color-bg;
+  font-weight: 600;
+  font-size: 15px;
 }
 
-
 .css-1wnsr1i {
-    border: 2px solid $color-dark-blue !important;
-    background-color: $color-bg !important;
-    width: calc(100% - 40px) !important;
-    padding: 10px !important;
+  border: 2px solid $color-dark-blue !important;
+  background-color: $color-bg !important;
+  width: calc(100% - 40px) !important;
+  padding: 10px !important;
 
-
-    @include md-min {
-        width: 50% !important;
-        max-width: 450px !important;
-    }
+  @include md-min {
+    width: 50% !important;
+    max-width: 450px !important;
+  }
 }
 
 .toggleContainer {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: fit-content;
-    border: 3px solid $color-dark-blue;
-    border-radius: 20px;
-    background: $color-dark-blue;
-    font-weight: bold;
-    color: $color-dark-blue;
-    cursor: pointer;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 3px solid $color-dark-blue;
+  border-radius: 20px;
+  background: $color-dark-blue;
+  font-weight: bold;
+  color: $color-dark-blue;
+  cursor: pointer;
 }
 
 .toggleContainer::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    left: 0%;
-    border-radius: 20px;
-    background: white;
-    transition: all 0.3s;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  border-radius: 20px;
+  background: white;
+  transition: all 0.3s;
 }
 
-.toggleCheckbox:checked+.toggleContainer::before {
-    left: 50%;
+.toggleCheckbox:checked + .toggleContainer::before {
+  left: 50%;
 }
 
 .toggleContainer div {
-    padding: 6px;
-    text-align: center;
-    z-index: 1;
+  padding: 6px;
+  text-align: center;
+  z-index: 1;
 }
 
 .toggleCheckbox {
-    display: none;
+  display: none;
 }
 
-.toggleCheckbox:checked+.toggleContainer div:first-child {
-    color: white;
-    transition: color 0.3s;
+.toggleCheckbox:checked + .toggleContainer div:first-child {
+  color: white;
+  transition: color 0.3s;
 }
 
-.toggleCheckbox:checked+.toggleContainer div:last-child {
-    color: #343434;
-    transition: color 0.3s;
+.toggleCheckbox:checked + .toggleContainer div:last-child {
+  color: #343434;
+  transition: color 0.3s;
 }
 
-.toggleCheckbox+.toggleContainer div:first-child {
-    color: #343434;
-    transition: color 0.3s;
+.toggleCheckbox + .toggleContainer div:first-child {
+  color: #343434;
+  transition: color 0.3s;
 }
 
-.toggleCheckbox+.toggleContainer div:last-child {
-    color: white;
-    transition: color 0.3s;
+.toggleCheckbox + .toggleContainer div:last-child {
+  color: white;
+  transition: color 0.3s;
 }
-
