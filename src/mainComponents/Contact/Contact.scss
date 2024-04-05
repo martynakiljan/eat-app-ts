@@ -27,6 +27,10 @@
     &[aria-invalid="true"] {
         border: 2px solid $color-error;
     }
+
+    @include md-min {
+        min-height: 400px;
+    }
 }
 
 .form__button {
@@ -35,7 +39,6 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-
 }
 
 .error {

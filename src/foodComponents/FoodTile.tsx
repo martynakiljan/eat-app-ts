@@ -1,6 +1,5 @@
 /** @format */
 import "../styles/all.scss";
-import React from "react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useBasket } from "../context/BasketContext";
@@ -16,14 +15,15 @@ const FoodTile = ({ id, name, price, src }: TileTypes) => {
         <p className="foodTile__title">{name}</p>
         <p className="foodTile__price">{price} CHF</p>
         <div className="foodTile__shopping-card">
-          <div
+          <button
+            className="foodTile__button"
             onClick={() => {
               addToBasket(id, name, price);
               handleOpen();
             }}
           >
             <FontAwesomeIcon icon={faCartShopping} />
-          </div>
+          </button>
         </div>
       </div>
     </div>
