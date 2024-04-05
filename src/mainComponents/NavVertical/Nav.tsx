@@ -27,9 +27,7 @@ const Nav = () => {
         <NavLink to="/AllFood" className="nav__item nav-item__home">
           <FontAwesomeIcon icon={faHome} />
         </NavLink>
-        <NavLink to="/LoginPanel" className="nav__item nav-item__login">
-          <FontAwesomeIcon icon={faUser} />
-        </NavLink>
+
         <NavLink to="/ComingSoon" className="nav__item nav-item__restaurant">
           <FontAwesomeIcon icon={faUtensils} />
         </NavLink>

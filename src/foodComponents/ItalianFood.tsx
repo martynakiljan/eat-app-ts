@@ -1,7 +1,6 @@
 /** @format */
 import FoodTile from "./FoodTile";
 import { useContext } from "react";
-import React from "react";
 import { FilterContext } from "../context/FilterContext";
 import "../styles/all.scss";
 import { ItalianKitchen } from "../kitchenData/ItalianKitchen/ItalianKitchen";

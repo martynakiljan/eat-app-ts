@@ -1,20 +1,31 @@
-@import "./mixins.scss";
-@import "./variables.scss";
+@import "./variables";
+@import "./mixins";
+
+html {
+  @include md-min {
+    overflow: hidden;
+  }
+}
 
 body {
-    background-color: $color-bg;
+  background-color: $color-bg;
 }
 
 .eat-app {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    @include md-min {
-        flex-direction: row;
-    }
+  @include md-min {
+    flex-direction: row;
+  }
 
+  @media (min-width: 2000px) {
+    max-width: 2000px;
+    margin: 0 auto;
+    border-right: 0.5px solid $color-main;
+  }
 }
 
 .eat-app__col2 {
-    width: 100%;
+  width: 100%;
 }

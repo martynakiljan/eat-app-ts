@@ -5,14 +5,12 @@ import "./styles/all.scss";
 import Home from "./mainComponents/Home/Home";
 import Nav from "./mainComponents/NavVertical/Nav";
 import { Routes, Route } from "react-router-dom";
-import LoginPanel from "./mainComponents/LoginPanel/LoginPanel";
 import Contact from "./mainComponents/Contact/Contact";
 import Help from "./mainComponents/Help/Help";
 import ComingSoon from "./mainComponents/ComingSoon/ComingSoon";
 import Location from "./mainComponents/Location/Location";
-import Footer from "./mainComponents/Footer/Footer";
 import { BasketProvider } from "./context/BasketContext";
-
+import Footer from "./mainComponents/Footer/Footer";
 export default function App() {
   return (
     <>
@@ -28,14 +26,13 @@ export default function App() {
                 <Route path="Contact" element={<Contact />} />
                 <Route path="ComingSoon" element={<ComingSoon />} />
                 <Route path="Help" element={<Help />} />
-                <Route path="LoginPanel" element={<LoginPanel />} />
                 <Route path="Location" element={<Location />} />
               </Route>
             </Routes>
           </BasketProvider>
+          <Footer />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

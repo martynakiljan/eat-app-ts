@@ -1,6 +1,5 @@
 /** @format */
 import FoodTile from "./FoodTile";
-import React from "react";
 import "../styles/all.scss";
 import { useContext } from "react";
 import { FilterContext } from "../context/FilterContext";

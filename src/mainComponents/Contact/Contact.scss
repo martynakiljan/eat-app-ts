@@ -1,29 +1,36 @@
 @import "../../styles/all.scss";
 
 .form {
-    @include content-width();
-    padding-bottom: 20px;
+  @include content-width();
+  padding-bottom: 20px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .form__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form__group {
+  width: 100%;
 }
 
 .form__label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__input {
-    border: 2px solid $color-main;
-    background-color: transparent;
-    margin: 15px 0;
-    min-width: 200px;
-    padding: 5px 10px;
+  border: 2px solid $color-main;
+  background-color: transparent;
+  margin: 15px 0;
+  width: 100%;
+  padding: 5px 10px;
 
+<<<<<<< HEAD
     &[aria-invalid="true"] {
         border: 2px solid $color-error;
     }
@@ -39,21 +46,42 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+=======
+  &[aria-invalid="true"] {
+    border: 2px solid $color-error;
+  }
+
+  @include md-min {
+    min-width: 400px;
+  }
+}
+
+.form__button {
+  background-color: $color-primary;
+  color: $color-bg;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+>>>>>>> f836d1d5060de67f70c28a8d9c367f2b250459ae
 }
 
 .error {
-    color: $color-error;
-    padding-bottom: 15px;
+  color: $color-error;
+  padding-bottom: 15px;
 }
 
 .form-correct {
-    color: $color-primary;
-    font-weight: bold;
-    margin-top: 15px;
+  color: $color-primary;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 .form-not-correct {
-    font-weight: bold;
-    color: $color-error;
-    margin-top: 15px;
+  font-weight: bold;
+  color: $color-error;
+  margin-top: 15px;
+}
+
+.form__title {
+  margin-bottom: 20px;
 }

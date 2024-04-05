@@ -1,103 +1,106 @@
 @import "../../styles/all.scss";
 
 .order__adnotation--text {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 .order__item {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .order__price,
 .order__item--text {
-    font-weight: 600;
+  font-weight: 600;
 
-    @include xs-max {
-        font-size: 12px;
-    }
+  @include xs-max {
+    font-size: 12px;
+  }
 }
 
-
 .order__item--text {
-    width: 150px;
+  width: 150px;
 
-    @include xs-max {
-        width: 70px;
-    }
+  @include xs-max {
+    width: 70px;
+  }
 }
 
 .order__modification--buttons,
 .order__price,
 .order__item,
 .order__modification {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .svg-inline--fa.fa-plus,
 .svg-inline--fa.fa-minus {
-    color: $color-dark-blue;
-    height: 10px;
-    border-radius: 50%;
-    width: 10px;
+  color: $color-dark-blue;
+  height: 10px;
+  border-radius: 50%;
+  width: 10px;
 }
 
 .order__info {
-    background-color: #ffcc99;
-    padding: 5px 10px;
-    font-size: 10px;
-    font-style: italic;
-    margin: 10px 0;
+  background-color: #ffcc99;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-style: italic;
+  margin: 10px 0;
 }
 
 .order__modification--num {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .order__price--price {
-    color: $color-dark-blue;
-    padding: 0 10px;
+  color: $color-dark-blue;
+  padding: 0 10px;
 }
 
 .order__price--button {
-    background-color: transparent;
-    border: 2px solid $color-dark-blue;
-    color: $color-dark-blue;
-    padding: 5px 15px;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%;
+  background-color: transparent;
+  border: 2px solid $color-dark-blue;
+  color: $color-dark-blue;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
 
-    &:hover {
-        background-color: $color-primary;
-        color: $color-bg;
-        border: 2px solid $color-primary;
-        cursor: pointer;
-    }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-bg;
+    border: 2px solid $color-primary;
+    cursor: pointer;
+  }
 
-    @include xs-max {
-        padding: 5px;
-        font-size: 14px;
-    }
+  @include xs-max {
+    padding: 5px;
+    font-size: 14px;
+  }
 }
 
 .order__modification {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .order__modification--text {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 svg.fa-trash {
-    color: $color-dark-blue;
-    padding-left: 20px;
-    font-size: 10px;
+  color: $color-dark-blue;
+  padding-left: 20px;
+  font-size: 10px;
 
-    @include xs-max {
+  @include xs-max {
+    padding-left: 10px;
+  }
+}
 
-        padding-left: 10px;
-    }
+.order__empty {
+  padding: 20px 0;
+  color: $color-error;
+  font-weight: bold;
 }
