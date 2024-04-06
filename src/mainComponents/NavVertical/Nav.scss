@@ -3,14 +3,14 @@
 .nav {
     position: sticky;
     left: 0;
+    right: 0;
     top: 0;
     height: auto;
     background-color: $color-main;
+}
 
-    @include md-min {
-        height: 100vh;
-        width: 15vh;
-    }
+.navfood {
+    height: 100%;
 }
 
 .nav__icons {
@@ -22,15 +22,16 @@
     height: 10vh;
     padding: 0 20px;
 
+    @include sm-min {
+        width: 50%;
+    }
 
     @include md-min {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-        padding: 0;
-        height: 100%;
-
+        height: 5vh;
+        width: 30%;
+        margin-left: 0;
+        padding: 0 50px;
+        margin-right: auto;
     }
 }
 

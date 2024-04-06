@@ -7,10 +7,12 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0 20px;
 
     @include md-min {
         margin: 10px 50px;
         justify-content: flex-start;
+        padding: 0;
     }
 
 }
@@ -63,4 +65,5 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+    padding: 0;
 }

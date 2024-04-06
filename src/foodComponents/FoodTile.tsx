@@ -6,6 +6,7 @@ import { useBasket } from "../context/BasketContext";
 import { TileTypes } from "../types/tileTypes";
 
 const FoodTile = ({ id, name, price, src }: TileTypes) => {
+  console.log(name);
   const { addToBasket, handleOpen } = useBasket();
 
   return (

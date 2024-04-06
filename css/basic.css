@@ -1,0 +1,130 @@
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xs-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  since word cannot work with media print, the files set the is-not-word variable globally,
+  this will ensure that all print things are added in print in pdf.css and print. and all
+  word things are not added within print media query.
+  @include print {
+
+  }
+*/
+/*
+  Helpers do not use
+*/
+@media screen and (min-width: 992px) {
+  html {
+    overflow: hidden;
+  }
+}
+
+body {
+  background-color: #fff6e9;
+}
+
+.eat-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .eat-app {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media (min-width: 2000px) {
+  .eat-app {
+    max-width: 2000px;
+    margin: 0 auto;
+    border-right: 0.5px solid #40a2e3;
+  }
+}
+
+.eat-app__col2 {
+  width: 100%;
+}/*# sourceMappingURL=basic.css.map */

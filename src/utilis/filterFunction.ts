@@ -7,7 +7,7 @@ export const filterFunction = (
   sortValue: string,
   searchQuery: string
 ) => {
-  let sortedKitchen = [...kitchen];
+  const sortedKitchen = [...kitchen];
 
   if (sortValue === "priceUp") {
     sortedKitchen.sort((a, b) => a.price - b.price);

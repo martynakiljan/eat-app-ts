@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useContext, useEffect } from "react";
 import { ChineseKitchen } from "../kitchenData/ChineseKitchen/ChineseKitchen";
 import { ItalianKitchen } from "../kitchenData/ItalianKitchen/ItalianKitchen";
@@ -13,14 +15,6 @@ import Stack from "@mui/material/Stack";
 
 const AllFood: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 992);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const { sortValue, searchQuery } = useContext(FilterContext);
   const allFood: TileTypes[] = ChineseKitchen.concat(
@@ -28,33 +22,42 @@ const AllFood: React.FC = () => {
     FastFoodKitchen
   );
 
-  // Filtrujemy jedzenie na podstawie wartości sortowania i wyszukiwania
   const filteredFood: TileTypes[] = filterFunction(
     allFood,
     sortValue,
     searchQuery
   );
 
-  const itemsPerPage = 4; // Liczba elementów na stronie
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 992);
+    };
 
-  // Obliczamy liczbę stron
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [filteredFood]);
+
+  const itemsPerPage = 4;
   const pageCount = Math.ceil(filteredFood.length / itemsPerPage);
-
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Funkcja do zmiany aktualnej strony
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
   };
 
-  // Obliczamy indeksy początkowy i końcowy elementów dla aktualnej strony
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = Math.min(startIndex + itemsPerPage, filteredFood.length);
+  const [startIndex, setStartIndex] = useState(0);
+  const [endIndex, setEndIndex] = useState(itemsPerPage);
+
+  useEffect(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, filteredFood.length);
+    setStartIndex(startIndex);
+    setEndIndex(endIndex);
+  }, [currentPage, filteredFood, itemsPerPage]);
 
   return (
-    <>
+    <div className="food-panel__container">
       <div className="food-panel">
-        {/* Filtrujemy jedzenie i wyświetlamy tylko elementy dla bieżącej strony */}
         {filteredFood.length !== 0 ? (
           filteredFood
             .slice(startIndex, endIndex)
@@ -82,7 +85,7 @@ const AllFood: React.FC = () => {
           />
         </Stack>
       )}
-    </>
+    </div>
   );
 };
 

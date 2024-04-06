@@ -1,0 +1,469 @@
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xs-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  since word cannot work with media print, the files set the is-not-word variable globally,
+  this will ensure that all print things are added in print in pdf.css and print. and all
+  word things are not added within print media query.
+  @include print {
+
+  }
+*/
+/*
+  Helpers do not use
+*/
+@media screen and (min-width: 992px) {
+  html {
+    overflow: hidden;
+  }
+}
+
+body {
+  background-color: #fff6e9;
+}
+
+.eat-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .eat-app {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media (min-width: 2000px) {
+  .eat-app {
+    max-width: 2000px;
+    margin: 0 auto;
+    border-right: 0.5px solid #40a2e3;
+  }
+}
+
+.eat-app__col2 {
+  width: 100%;
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xs-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-max($print) {
+
+  }
+*/
+/*
+  Usage:
+  since word cannot work with media print, the files set the is-not-word variable globally,
+  this will ensure that all print things are added in print in pdf.css and print. and all
+  word things are not added within print media query.
+  @include print {
+
+  }
+*/
+/*
+  Helpers do not use
+*/
+.main-panel {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .main-panel {
+    padding: 0 50px;
+  }
+}
+
+.food-panel {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .food-panel {
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .food-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .food-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". ." ". .";
+    height: 45vh;
+  }
+}
+
+.foodTile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  margin: 20px 0;
+}
+@media screen and (min-width: 992px) {
+  .foodTile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.foodTile__wrapper-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .foodTile__wrapper-text {
+    padding-left: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: flex-start;
+            flex-direction: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.foodTile__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #0d9276;
+}
+
+.fa-cart-shopping {
+  color: #40a2e3;
+  width: 30px;
+  height: 30px;
+}
+.home__top .fa-cart-shopping {
+  padding: 5px 0;
+}
+.shopping__button .fa-cart-shopping {
+  width: 50px;
+  height: 50px;
+}
+
+.foodTile__title {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #0d9276;
+  font-size: 15px;
+}
+@media screen and (min-width: 992px) {
+  .foodTile__title {
+    font-size: 20px;
+  }
+}
+
+.foodTile__price {
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.home__basket--price {
+  color: #fff6e9;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.info__food {
+  margin: 50px 0;
+}
+
+.info__button {
+  border: 2px solid #0d9276;
+  padding: 5px 10px;
+  margin: 15px 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.info__button:hover {
+  background-color: #0d9276;
+  color: #fff6e9;
+}
+
+.foodTile__button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.info__button {
+  border: 2px solid #0d9276;
+  padding: 5px 10px;
+  margin: 15px 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.info__button:hover {
+  background-color: #0d9276;
+  color: #fff6e9;
+}
+
+.nav {
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: auto;
+  background-color: #40a2e3;
+}
+@media screen and (min-width: 992px) {
+  .nav {
+    height: 100vh;
+    width: 15vh;
+  }
+}
+
+.nav__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  padding: 0 20px;
+}
+@media screen and (min-width: 992px) {
+  .nav__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    height: 100%;
+  }
+}
+
+.svg-inline--fa {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff6e9;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.fa-bowl-food {
+  color: #1d5d9b;
+  width: 45px;
+  height: 45px;
+}
+
+.active .svg-inline--fa {
+  color: #bbe2ec;
+}/*# sourceMappingURL=Nav.css.map */

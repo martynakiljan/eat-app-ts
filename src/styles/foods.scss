@@ -2,17 +2,30 @@
   @include content-width();
 }
 
+.food-panel__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include lg-min {
+    height: 50vh;
+  }
+}
+
 .food-panel {
   @include content-width();
 
-  @include sm-min {
+  @include md-max {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
 
   @include md-min {
+    margin-left: 0;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -20,7 +33,7 @@
     grid-template-areas:
       ". ."
       ". .";
-    height: 45vh;
+    height: auto;
   }
 }
 
@@ -29,10 +42,11 @@
   flex-direction: column;
   align-items: center;
   align-items: center;
-  margin: 20px 0;
+  padding: 20px;
 
   @include md-min {
     flex-direction: row;
+    padding-left: 0;
   }
 }
 
@@ -67,8 +81,13 @@
   }
 
   .shopping__button & {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+
+    @include md-min {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -99,25 +118,6 @@
 }
 
 .info__button {
-<<<<<<< HEAD
-    border: 2px solid $color-primary;
-    padding: 5px 10px;
-    margin: 15px 0;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:hover {
-        background-color: $color-primary;
-        color: $color-bg;
-    }
-}
-
-.foodTile__button {
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-}
-=======
   border: 2px solid $color-primary;
   padding: 5px 10px;
   margin: 15px 0;
@@ -129,4 +129,23 @@
     color: $color-bg;
   }
 }
->>>>>>> f836d1d5060de67f70c28a8d9c367f2b250459ae
+
+.foodTile__button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+
+.info__button {
+  border: 2px solid $color-primary;
+  padding: 5px 10px;
+  margin: 15px 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-bg;
+  }
+}

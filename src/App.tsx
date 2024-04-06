@@ -10,7 +10,7 @@ import Help from "./mainComponents/Help/Help";
 import ComingSoon from "./mainComponents/ComingSoon/ComingSoon";
 import Location from "./mainComponents/Location/Location";
 import { BasketProvider } from "./context/BasketContext";
-import Footer from "./mainComponents/Footer/Footer";
+
 export default function App() {
   return (
     <>
@@ -30,7 +30,6 @@ export default function App() {
               </Route>
             </Routes>
           </BasketProvider>
-          <Footer />
         </div>
       </div>
     </>
