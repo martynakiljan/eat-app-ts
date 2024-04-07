@@ -1,6 +1,5 @@
 /** @format */
 import "./ComingSoon.scss";
-import React from "react";
 const ComingSoon = () => {
   return (
     <div className="comingSoon__container">

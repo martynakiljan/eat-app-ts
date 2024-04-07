@@ -1,22 +1,19 @@
 /** @format */
-
+import { ReactNode } from "react";
 import Fade from "@mui/material/Fade";
 import Box from "@mui/material/Box";
 import { Modal, useMediaQuery } from "@mui/material";
 import "./Popup.scss";
 import { useBasket } from "../../context/BasketContext";
-import BasketList from "../BasketList/BasketList";
-import FormOrder from "../FormOrder/FormOrder";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Popup = () => {
-  const {
-    open,
-    handleClose,
-    totalPrice,
-    deliveryOption,
-    handleDeliveryOptionChange,
-    basket,
-  } = useBasket();
+type PopupProps = {
+  children: ReactNode;
+  handleClose: () => void;
+};
+const Popup: React.FC<PopupProps> = ({ children, handleClose }) => {
+  const { open } = useBasket();
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   const style = {
@@ -42,34 +39,8 @@ const Popup = () => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <div className="shopping__box">
-              <input type="checkbox" id="toggle" className="toggleCheckbox" />
-              <label htmlFor="toggle" className="toggleContainer">
-                <div onClick={() => handleDeliveryOptionChange("delivery")}>
-                  Delivery
-                </div>
-                <div onClick={() => handleDeliveryOptionChange("takeaway")}>
-                  Take away
-                </div>
-              </label>
-              {deliveryOption === "delivery" && (
-                <div className="order__delivery order__item">
-                  <p className="order__item--text">Delivery</p>
-                  <p className="order__item--text">5.90 CHF</p>
-                </div>
-              )}
-              <div className="order__info">
-                <p className="order__info--text">* minimum order is 9 CHF</p>
-              </div>
-              <BasketList basket={basket} />
-              <FormOrder />
-              <div className="order__price">
-                <p className="order__price--text">All together to pay:</p>
-                <p className="order__price--price">
-                  {totalPrice ? totalPrice : 0} CHF
-                </p>
-              </div>
-            </div>
+            <FontAwesomeIcon icon={faXmark} onClick={handleClose} />
+            {children}
           </Box>
         </Fade>
       </Modal>

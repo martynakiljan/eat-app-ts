@@ -15,9 +15,13 @@ export const filterFunction = (
     sortedKitchen.sort((a, b) => b.price - a.price);
   }
 
-  const filteredFood = sortedKitchen.filter((food) =>
-    food.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  return filteredFood;
+  if (searchQuery.trim() !== "") {
+    const filteredFood = sortedKitchen.filter((food) =>
+      food.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    console.log(filteredFood);
+    return filteredFood;
+  } else {
+    return sortedKitchen;
+  }
 };

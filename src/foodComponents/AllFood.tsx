@@ -32,7 +32,6 @@ const AllFood: React.FC = () => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 992);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [filteredFood]);
@@ -47,6 +46,7 @@ const AllFood: React.FC = () => {
 
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(itemsPerPage);
+  const [maxPage, setMaxPage] = useState(pageCount);
 
   useEffect(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -55,8 +55,19 @@ const AllFood: React.FC = () => {
     setEndIndex(endIndex);
   }, [currentPage, filteredFood, itemsPerPage]);
 
+  useEffect(() => {
+    if (currentPage > maxPage) {
+      setCurrentPage(maxPage);
+    }
+  }, [maxPage, currentPage]);
+
+  useEffect(() => {
+    const newPageCount = Math.ceil(filteredFood.length / itemsPerPage);
+    setMaxPage(newPageCount);
+  }, [filteredFood, itemsPerPage]);
+
   return (
-    <div className="food-panel__container">
+    <>
       <div className="food-panel">
         {filteredFood.length !== 0 ? (
           filteredFood
@@ -85,7 +96,7 @@ const AllFood: React.FC = () => {
           />
         </Stack>
       )}
-    </div>
+    </>
   );
 };
 

@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import "./FormOrder.scss"; // Import the CSS file where styles are defined
+import "./FormOrder.scss";
 import { FormDataOrderType } from "../../types/formDataOrderType";
 import { useBasket } from "../../context/BasketContext";
 import { SyncLoader } from "react-spinners";
+import OrderConfirmation from "../OrderConfirmation/OrderConfirmation";
 
 const Form = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -13,6 +14,11 @@ const Form = () => {
   const [submitClicked, setSubmitClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { totalPrice, emptyBasket } = useBasket();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    address: "",
+  });
 
   const {
     register,
@@ -20,8 +26,8 @@ const Form = () => {
     formState: { errors },
   } = useForm<FormDataOrderType>();
 
-  let minOrder = 9;
-  let noErrors = Object.keys(errors).length === 0;
+  const minOrder = 9;
+  const noErrors = Object.keys(errors).length === 0;
   const minOrderOK = totalPrice > minOrder;
 
   useEffect(() => {
@@ -32,15 +38,15 @@ const Form = () => {
     }
   }, [totalPrice, minOrderOK]);
 
-  const onSubmit: SubmitHandler<FormDataOrderType> = () => {
+  const onSubmit: SubmitHandler<FormDataOrderType> = (data) => {
     if (noErrors || isOrderOK) {
+      setFormData(data);
       setIsFormValid(true);
       setIsLoading(true);
 
       setTimeout(() => {
         setIsLoading(false);
-        window.location.reload();
-      }, 5000);
+      }, 1000);
     }
 
     setSubmitClicked(true);
@@ -58,7 +64,7 @@ const Form = () => {
             <input
               {...register("firstName", {
                 required: true,
-                minLength: 5,
+                minLength: 3,
                 pattern: /^[A-Za-z]+$/i,
               })}
               className="form-order__input"
@@ -68,7 +74,7 @@ const Form = () => {
             )}
             {errors.firstName && errors.firstName.type === "minLength" && (
               <span className="form-order__error">
-                First name must be at least 5 characters long
+                First name must be at least 3 characters long
               </span>
             )}
             {errors.firstName && errors.firstName.type === "pattern" && (
@@ -136,9 +142,11 @@ const Form = () => {
                   <p className="spinner__text">Wait...</p>
                 </div>
               ) : (
-                <p className="info__pay info__pay--correct">
-                  Your order is placed
-                </p>
+                <OrderConfirmation
+                  firstName={formData.firstName}
+                  lastName={formData.lastName}
+                  address={formData.address}
+                />
               ))}
           </div>
         </form>

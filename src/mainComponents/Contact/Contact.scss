@@ -16,6 +16,10 @@
 
 .form__group {
   width: 100%;
+
+  @include lg-min {
+    width: 50%;
+  }
 }
 
 .form__label {
@@ -24,7 +28,7 @@
 }
 
 .form__input {
-  border: 2px solid $color-main;
+  border: 1px solid $color-main;
   background-color: transparent;
   margin: 15px 0;
   width: 100%;
@@ -59,7 +63,6 @@
 }
 
 .form-not-correct {
-  font-weight: bold;
   color: $color-error;
   margin-top: 15px;
 }

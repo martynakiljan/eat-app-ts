@@ -10,7 +10,6 @@
 
 .order__price,
 .order__item--text {
-  font-weight: 600;
 
   @include xs-max {
     font-size: 12px;
@@ -43,6 +42,7 @@
 }
 
 .order__info {
+  display: inline-block;
   background-color: #ffcc99;
   padding: 5px 10px;
   font-size: 10px;

@@ -12,7 +12,7 @@ import {
   faMagnifyingGlass,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
-import Popup from "../Popup/Popup";
+import Order from "../Order/Order";
 import { useBasket } from "../../context/BasketContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FilterContext } from "../../context/FilterContext";
@@ -70,7 +70,7 @@ const Home = () => {
               <FontAwesomeIcon icon={faCartShopping} />
               <p className="shopping__price">{totalPrice} CHF</p>
             </button>
-            <Popup />
+            <Order />
           </div>
         </div>
       </header>

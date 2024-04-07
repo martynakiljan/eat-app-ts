@@ -47,7 +47,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [basket, setBasket] = useState<BasketItemTypes[]>([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
-  let deliveryPrice = 5.9;
+  const deliveryPrice = 5.9;
 
   // basket is empty //
   const [emptyBasket, setIsEmpty] = useState<boolean>(false);
@@ -60,12 +60,13 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   }, [basket]);
 
   //delivery//
-
   const [deliveryOption, setDeliveryOption] = useState("delivery");
 
   const handleDeliveryOptionChange = (option: string) => {
     setDeliveryOption(option);
-    calculateTotalPrice(basket, option);
+    if (basket.length !== 0) {
+      calculateTotalPrice(basket, option);
+    }
   };
 
   //add to Basket //
@@ -93,7 +94,6 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   //increase in Basket//
-
   const increaseInBasket = (itemID: number, itemAmount: number) => {
     const updatedBasket = basket.map((item) => {
       if (item.id === itemID) {
@@ -110,8 +110,8 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
     setBasket(updatedBasket);
     calculateTotalPrice(updatedBasket, deliveryOption);
   };
-  // decrease
 
+  // decrease
   const decreaseInBasket = (itemId: number, itemAmount: number) => {
     const updatedBasket = basket.map((item) => {
       if (item.id === itemId && itemAmount > 1) {
@@ -130,7 +130,6 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   // total price calculate //
-
   const calculateTotalPrice = (
     basket: BasketItemTypes[],
     deliveryOption: string
@@ -160,6 +159,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   const handleClose = () => setOpen(false);
   const openModal = () => {};
 
+ 
   return (
     <BasketContext.Provider
       value={{
