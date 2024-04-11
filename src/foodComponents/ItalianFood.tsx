@@ -6,7 +6,7 @@ import "../styles/all.scss";
 import { ItalianKitchen } from "../kitchenData/ItalianKitchen/ItalianKitchen";
 import { filterFunction } from "../utilis/filterFunction";
 import NoFoodFound from "./NoFoodFoodFound";
-import { TileTypes } from "../types/tileTypes";
+import { Tile } from "../types/tile.tsx";
 
 const ItalianFood = () => {
   const { sortValue, searchQuery } = useContext(FilterContext);
@@ -17,7 +17,7 @@ const ItalianFood = () => {
       <div className="food-panel">
         {filteredFood.length !== 0 ? (
           filteredFood.map(
-            ({ id, name, description, price, src }: TileTypes) => (
+            ({ id, name, description, price, src }: Tile) => (
               <FoodTile
                 id={id}
                 key={id}

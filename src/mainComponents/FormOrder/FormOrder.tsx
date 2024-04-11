@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import "./FormOrder.scss";
-import { FormDataOrderType } from "../../types/formDataOrderType";
+import { FormDataOrderType } from "../../types/formDataOrder.tsx";
 import { useBasket } from "../../context/BasketContext";
 import { SyncLoader } from "react-spinners";
 import OrderConfirmation from "../OrderConfirmation/OrderConfirmation";

@@ -1,6 +1,6 @@
 @import "../../styles/all.scss";
 
-.comingSoon__container {
+.coming-soon__container {
   display: flex;
   flex-direction: column;
 
@@ -9,7 +9,7 @@
   }
 }
 
-.comingSoon__img {
+.coming-soon__img {
   background-image: url(../../images//restaurant.jpg);
   background-repeat: no-repeat;
   width: 100%;
@@ -19,15 +19,15 @@
   position: relative;
 }
 
-.comingSoon__col {
+.coming-soon__col {
   width: 100%;
 
   @include md-min {
-    widows: 50%;
+    width: 45%;
   }
 }
 
-.comingSoon__text {
+.coming-soon__text {
   padding: 20px;
 
   @include md-min {
@@ -35,17 +35,30 @@
   }
 }
 
-.comingSoon__title {
+.coming-soon__title {
   font-size: 40px;
   padding: 40px 0;
 }
 
-.comingSoon__subtitle {
+.coming-soon__subtitle {
   font-size: 30px;
 }
 
-.comingSoon__info {
+.coming-soon__info {
   font-size: 20px;
   font-style: italic;
   font-weight: normal;
+  padding: 20px 0;
+}
+
+.table {
+  padding: 20px 0;
+}
+
+.table__day {
+  padding-right: 20px;
+}
+
+.table__title {
+  text-align: left;
 }

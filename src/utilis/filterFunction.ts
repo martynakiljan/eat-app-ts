@@ -1,9 +1,9 @@
 /** @format */
 
-import { TileTypes } from "../types/tileTypes";
+import { Tile } from "../types/tile.tsx";
 
 export const filterFunction = (
-  kitchen: TileTypes[],
+  kitchen: Tile[],
   sortValue: string,
   searchQuery: string
 ) => {
@@ -19,7 +19,6 @@ export const filterFunction = (
     const filteredFood = sortedKitchen.filter((food) =>
       food.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    console.log(filteredFood);
     return filteredFood;
   } else {
     return sortedKitchen;

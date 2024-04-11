@@ -2,20 +2,19 @@
 import Popup from "../Popup/Popup";
 import { useBasket } from "../../context/BasketContext";
 import "./OrderConfimation.scss";
-import { FormDataOrderType } from "../../types/formDataOrderType";
+import { FormDataOrder } from "../../types/formDataOrder.tsx";
 
-const OrderConfirmation: React.FC<FormDataOrderType> = ({
+const OrderConfirmation: React.FC<FormDataOrder> = ({
   firstName,
   lastName,
   address,
 }) => {
   const { basket, totalPrice, deliveryOption } = useBasket();
 
-
   const handleClose = () => {
     window.location.reload();
   };
-  
+
   return (
     <Popup handleClose={handleClose}>
       <div>

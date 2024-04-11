@@ -1,12 +1,12 @@
 /** @format */
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavFood.scss";
-import { SortAndSearchTypes } from "../../types/sortAndSearchTypes";
+import { SortAndSearch } from "../../types/sortAndSearch";
 import { FilterContext } from "../../context/FilterContext";
 
 const NavFood = () => {
-  const { handleChangeSort, sortValue }: SortAndSearchTypes =
+  const { handleChangeSort, sortValue }: SortAndSearch =
     useContext(FilterContext);
 
   return (
@@ -31,8 +31,8 @@ const NavFood = () => {
             value={sortValue}
             onChange={handleChangeSort}
           >
-            <option value="priceUp">price up</option>
-            <option value="priceDown">price down</option>
+            <option value="priceUp">Sort by lowest price</option>
+            <option value="priceDown">Sort by highest price</option>
           </select>
         </label>
       </li>

@@ -1,7 +1,7 @@
 /** @format */
 import React, { ReactNode, useEffect } from "react";
 import { useState, useContext, createContext } from "react";
-import { BasketItemTypes } from "../types/basketTypes";
+import { BasketItemTypes } from "../types/basket";
 
 type ContextType = {
   basket: BasketItemTypes[];
@@ -159,7 +159,6 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   const handleClose = () => setOpen(false);
   const openModal = () => {};
 
- 
   return (
     <BasketContext.Provider
       value={{

@@ -58,17 +58,13 @@ const Help = () => {
 
         <h2 className="help__question">Still have questions?</h2>
         <p className="help__text">
-          <span>
-            {" "}
-            Can't find the answer you're looking for? Kindly fill the{" "}
-          </span>
+          Can't find the answer you're looking for? Please fill out the form
+          below. Want to file a complaint? Fill out the form to get answers
+          ASAP.
+          <br></br>
           <Link to="/Contact" className="form__link">
-            form
+            [Link to the form]
           </Link>
-          <span>
-            {" "}
-            below Want to file a complaint? Fill the form to get answers ASAP
-          </span>
         </p>
       </div>
     </>

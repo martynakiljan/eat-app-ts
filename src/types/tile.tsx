@@ -1,8 +1,9 @@
 /** @format */
 
-export type BasketItemTypes = {
+export type Tile = {
   id: number;
   name: string;
   price: number;
-  amount: number;
+  description?: string;
+  src: string;
 };

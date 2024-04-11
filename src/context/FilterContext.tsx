@@ -2,9 +2,6 @@
 
 // FilterContext.tsx
 import { createContext } from "react";
-import { SortAndSearchTypes } from "../types/sortAndSearchTypes";
+import { SortAndSearch } from "../types/sortAndSearch";
 
-export const FilterContext = createContext<SortAndSearchTypes>(
-  {} as SortAndSearchTypes
-);
-
+export const FilterContext = createContext<SortAndSearch>({} as SortAndSearch);

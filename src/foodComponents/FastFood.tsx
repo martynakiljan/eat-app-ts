@@ -7,7 +7,7 @@ import { FilterContext } from "../context/FilterContext";
 import { filterFunction } from "../utilis/filterFunction";
 import { FastFoodKitchen } from "../kitchenData/FastFoodKitchen/FastFoodKitchen";
 import NoFoodFound from "./NoFoodFoodFound";
-import { TileTypes } from "../types/tileTypes";
+import { Tile } from "../types/tile.tsx";
 
 const FastFood = () => {
   const { searchQuery, sortValue } = useContext(FilterContext);
@@ -18,7 +18,7 @@ const FastFood = () => {
       <div className="food-panel">
         {filteredFood.length !== 0 ? (
           filteredFood.map(
-            ({ id, name, description, price, src }: TileTypes) => (
+            ({ id, name, description, price, src }: Tile) => (
               <FoodTile
                 id={id}
                 key={id}

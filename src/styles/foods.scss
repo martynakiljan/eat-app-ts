@@ -68,18 +68,16 @@
   width: 30px;
   height: 30px;
 
-  .home__top & {
+  .nav & {
     padding: 5px 0;
+    color: $color-bg;
   }
 
   .shopping__button & {
     width: 30px;
     height: 30px;
 
-    @include md-min {
-      width: 50px;
-      height: 50px;
-    }
+
   }
 }
 
@@ -140,4 +138,22 @@
     background-color: $color-primary;
     color: $color-bg;
   }
+}
+
+.shopping__piece {
+  background-color: $color-dark-blue;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: $color-bg;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
+.shopping__piece--piece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

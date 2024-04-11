@@ -1,6 +1,6 @@
 /** @format */
 
-export type FormDataOrderType = {
+export type FormDataOrder = {
   firstName: string;
   lastName: string;
   address: string;

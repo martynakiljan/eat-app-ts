@@ -13,25 +13,23 @@ import { BasketProvider } from "./context/BasketContext";
 
 export default function App() {
   return (
-    <>
+    <BasketProvider>
       <div className="eat-app">
         <div className="eat-app__col1">
           <Nav />
         </div>
         <div className="eat-app__col2">
-          <BasketProvider>
-            <Home />
-            <Routes>
-              <Route path="/">
-                <Route path="Contact" element={<Contact />} />
-                <Route path="ComingSoon" element={<ComingSoon />} />
-                <Route path="Help" element={<Help />} />
-                <Route path="Location" element={<Location />} />
-              </Route>
-            </Routes>
-          </BasketProvider>
+          <Home />
+          <Routes>
+            <Route path="/">
+              <Route path="Contact" element={<Contact />} />
+              <Route path="ComingSoon" element={<ComingSoon />} />
+              <Route path="Help" element={<Help />} />
+              <Route path="Location" element={<Location />} />
+            </Route>
+          </Routes>
         </div>
       </div>
-    </>
+    </BasketProvider>
   );
 }

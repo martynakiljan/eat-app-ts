@@ -22,7 +22,7 @@ const Location = () => {
       <div className="location__map">
         <iframe
           title="location"
-          src="https://maps.google.com/maps?width=311&amp;height=500&amp;hl=en&amp;q=Ankerstrasse%20Z%C3%BCrich+(Restaurant)&amp;t=p&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://maps.google.com/maps?&amp;hl=en&amp;q=Ankerstrasse%20Z%C3%BCrich+(Restaurant)&amp;t=p&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>{" "}
         <script
           type="text/javascript"

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.scss";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FormDataType } from "../../types/formDataTypes";
+import { FormDataType } from "../../types/formData";
 
 const Contact: React.FC = () => {
   const [formCorrect, setFormCorrect] = useState(false);

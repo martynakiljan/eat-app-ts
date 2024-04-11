@@ -26,6 +26,7 @@ const Popup: React.FC<PopupProps> = ({ children, handleClose }) => {
     border: "2px solid #000",
     boxShadow: "0 3px 5px rgba(0, 0, 0, 0.2)",
     p: isSmallScreen ? 1 : 4,
+    maxWidth: "600px"
   };
 
   return open ? (

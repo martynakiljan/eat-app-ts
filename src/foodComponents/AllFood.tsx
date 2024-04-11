@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FilterContext } from "../context/FilterContext";
 import { filterFunction } from "../utilis/filterFunction";
 import NoFoodFound from "./NoFoodFoodFound";
-import { TileTypes } from "../types/tileTypes";
+import { Tile } from "../types/tile.tsx";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
@@ -17,16 +17,12 @@ const AllFood: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
 
   const { sortValue, searchQuery } = useContext(FilterContext);
-  const allFood: TileTypes[] = ChineseKitchen.concat(
+  const allFood: Tile[] = ChineseKitchen.concat(
     ItalianKitchen,
     FastFoodKitchen
   );
 
-  const filteredFood: TileTypes[] = filterFunction(
-    allFood,
-    sortValue,
-    searchQuery
-  );
+  const filteredFood: Tile[] = filterFunction(allFood, sortValue, searchQuery);
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,7 +60,12 @@ const AllFood: React.FC = () => {
   useEffect(() => {
     const newPageCount = Math.ceil(filteredFood.length / itemsPerPage);
     setMaxPage(newPageCount);
+    setCurrentPage(1);
   }, [filteredFood, itemsPerPage]);
+
+  const handleGetAllFood = () => {
+    console.log("ok");
+  };
 
   return (
     <>
@@ -72,7 +73,7 @@ const AllFood: React.FC = () => {
         {filteredFood.length !== 0 ? (
           filteredFood
             .slice(startIndex, endIndex)
-            .map(({ id, name, description, price, src }: TileTypes) => (
+            .map(({ id, name, description, price, src }: Tile) => (
               <FoodTile
                 id={id}
                 name={name}
@@ -83,7 +84,7 @@ const AllFood: React.FC = () => {
               />
             ))
         ) : (
-          <NoFoodFound />
+          <NoFoodFound getAllFood={handleGetAllFood} />
         )}
       </div>
       {isDesktop && (

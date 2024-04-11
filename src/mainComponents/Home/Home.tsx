@@ -30,6 +30,7 @@ const Home = () => {
     if (inputValue !== "") {
       setSearchQuery(inputValue);
     }
+    setSearchQuery(inputValue);
   };
 
   //sort//
@@ -64,13 +65,6 @@ const Home = () => {
               placeholder="Search food..."
               onChange={handleSearchChange}
             ></input>
-          </div>
-          <div className="shopping__basket">
-            <button onClick={handleOpen} className="shopping__button">
-              <FontAwesomeIcon icon={faCartShopping} />
-              <p className="shopping__price">{totalPrice} CHF</p>
-            </button>
-            <Order />
           </div>
         </div>
       </header>

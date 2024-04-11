@@ -3,9 +3,9 @@ import "../styles/all.scss";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useBasket } from "../context/BasketContext";
-import { TileTypes } from "../types/tileTypes";
+import { Tile} from "../types/tile.tsx";
 
-const FoodTile = ({ id, name, price, src }: TileTypes) => {
+const FoodTile = ({ id, name, price, src }: Tile) => {
   const { addToBasket, handleOpen } = useBasket();
 
   return (

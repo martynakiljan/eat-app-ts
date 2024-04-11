@@ -6,7 +6,7 @@ import { FilterContext } from "../context/FilterContext";
 import { filterFunction } from "../utilis/filterFunction";
 import { ChineseKitchen } from "../kitchenData/ChineseKitchen/ChineseKitchen";
 import NoFoodFound from "./NoFoodFoodFound";
-import { TileTypes } from "../types/tileTypes";
+import { Tile } from "../types/tile.tsx";
 
 const ChineseFood = () => {
   const { sortValue, searchQuery } = useContext(FilterContext);
@@ -16,16 +16,18 @@ const ChineseFood = () => {
     <>
       <div className="food-panel">
         {filteredFood.length !== 0 ? (
-          filteredFood.map(({ id, name, description, price, src } :TileTypes) => (
-            <FoodTile
-              id={id}
-              key={id}
-              name={name}
-              description={description}
-              price={price}
-              src={src}
-            />
-          ))
+          filteredFood.map(
+            ({ id, name, description, price, src }: Tile) => (
+              <FoodTile
+                id={id}
+                key={id}
+                name={name}
+                description={description}
+                price={price}
+                src={src}
+              />
+            )
+          )
         ) : (
           <NoFoodFound />
         )}
