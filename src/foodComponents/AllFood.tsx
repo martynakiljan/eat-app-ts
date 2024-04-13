@@ -11,12 +11,11 @@ import { filterFunction } from "../utilis/filterFunction";
 import NoFoodFound from "./NoFoodFoodFound";
 import { Tile } from "../types/tile.tsx";
 import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 
 const AllFood: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
 
-  const { sortValue, searchQuery } = useContext(FilterContext);
+  const { sortValue, searchQuery, setSearchQuery } = useContext(FilterContext);
   const allFood: Tile[] = ChineseKitchen.concat(
     ItalianKitchen,
     FastFoodKitchen
@@ -55,17 +54,28 @@ const AllFood: React.FC = () => {
     if (currentPage > maxPage) {
       setCurrentPage(maxPage);
     }
-  }, [maxPage, currentPage]);
+  }, [maxPage, currentPage, searchQuery]);
 
   useEffect(() => {
     const newPageCount = Math.ceil(filteredFood.length / itemsPerPage);
     setMaxPage(newPageCount);
-    setCurrentPage(1);
-  }, [filteredFood, itemsPerPage]);
+    if (currentPage > newPageCount) {
+      setCurrentPage(newPageCount);
+    }
+  }, [filteredFood, itemsPerPage, currentPage]);
 
-  const handleGetAllFood = () => {
-    console.log("ok");
+  const resetFun = () => {
+    setSearchQuery("");
+    setCurrentPage(() => {
+      return 1;
+    });
+
+    console.log(searchQuery);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
 
   return (
     <>
@@ -84,18 +94,18 @@ const AllFood: React.FC = () => {
               />
             ))
         ) : (
-          <NoFoodFound getAllFood={handleGetAllFood} />
+          <NoFoodFound resetFun={resetFun} />
         )}
       </div>
       {isDesktop && (
-        <Stack spacing={4} justifyContent="center" alignItems="center">
+        <div className="pagination">
           <Pagination
             count={pageCount}
             page={currentPage}
             onChange={handleChange}
             color="primary"
           />
-        </Stack>
+        </div>
       )}
     </>
   );

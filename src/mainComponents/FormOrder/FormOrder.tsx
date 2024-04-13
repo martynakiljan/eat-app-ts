@@ -90,8 +90,8 @@ const Form = () => {
             <input
               {...register("lastName", {
                 required: true,
-                minLength: 5,
-                pattern: /^[A-Za-z]+$/i,
+                minLength: 3,
+                pattern: /^[A-Za-z-]+$/i,
               })}
               className="form-order__input"
             />
@@ -100,7 +100,7 @@ const Form = () => {
             )}
             {errors.lastName && errors.lastName.type === "minLength" && (
               <span className="form-order__error">
-                Last name must be at least 5 characters long
+                Last name must be at least 3 characters long
               </span>
             )}
             {errors.lastName && errors.lastName.type === "pattern" && (

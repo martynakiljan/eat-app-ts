@@ -8,19 +8,12 @@ import ChineseFood from "../../foodComponents/ChineseFood";
 import FastFood from "../../foodComponents/FastFood";
 import ItalianFood from "../../foodComponents/ItalianFood";
 import { Routes, Route, Navigate } from "react-router-dom";
-import {
-  faMagnifyingGlass,
-  faCartShopping,
-} from "@fortawesome/free-solid-svg-icons";
-import Order from "../Order/Order";
-import { useBasket } from "../../context/BasketContext";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FilterContext } from "../../context/FilterContext";
-import { SortAndSearchTypes } from "../../types/sortAndSearchTypes";
+import { SortAndSearch } from "../../types/sortAndSearch";
 
 const Home = () => {
-  const { handleOpen, totalPrice } = useBasket();
-
   // search //
   const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -49,7 +42,8 @@ const Home = () => {
           sortValue,
           searchQuery,
           handleChangeSort,
-        } as SortAndSearchTypes
+          setSearchQuery,
+        } as SortAndSearch
       }
     >
       <header className="home__header">

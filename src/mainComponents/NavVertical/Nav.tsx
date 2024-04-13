@@ -15,7 +15,7 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
-  const { handleOpen, totalPrice } = useBasket();
+  const { handleOpen, totalPrice, basketLength } = useBasket();
   const reloadPage = () => {
     window.location.reload();
   };
@@ -53,7 +53,7 @@ const Nav = () => {
           <FontAwesomeIcon icon={faCartShopping} />
           <p className="shopping__price">{totalPrice} CHF</p>
           <div className="shopping__piece">
-            <p className="shopping__piece--piece">0</p>
+            <p className="shopping__piece--piece">{basketLength}</p>
           </div>
         </button>
         <Order />

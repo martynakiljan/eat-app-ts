@@ -1,10 +1,10 @@
 /** @format */
 import React, { ReactNode, useEffect } from "react";
 import { useState, useContext, createContext } from "react";
-import { BasketItemTypes } from "../types/basket";
+import { BasketItem } from "../types/basket";
 
 type ContextType = {
-  basket: BasketItemTypes[];
+  basket: BasketItem[];
   addToBasket: (
     id: number,
     name: string,
@@ -30,6 +30,7 @@ type ContextType = {
   removeFromBasket: (itemPrice: number, itemId: number) => void;
   handleDeliveryOptionChange: (value: string) => void;
   deliveryOption: string;
+  basketLength: number;
 };
 
 const BasketContext = createContext<ContextType | null>(null);
@@ -45,7 +46,7 @@ export const useBasket = () => {
 export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [basket, setBasket] = useState<BasketItemTypes[]>([]);
+  const [basket, setBasket] = useState<BasketItem[]>([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const deliveryPrice = 5.9;
 
@@ -109,6 +110,9 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
 
     setBasket(updatedBasket);
     calculateTotalPrice(updatedBasket, deliveryOption);
+    setBasketLength(
+      updatedBasket.reduce((total, item) => total + item.amount, 0)
+    );
   };
 
   // decrease
@@ -127,11 +131,14 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
 
     calculateTotalPrice(updatedBasket, deliveryOption);
     setBasket(updatedBasket);
+    setBasketLength(
+      updatedBasket.reduce((total, item) => total + item.amount, 0)
+    );
   };
 
   // total price calculate //
   const calculateTotalPrice = (
-    basket: BasketItemTypes[],
+    basket: BasketItem[],
     deliveryOption: string
   ) => {
     let totalPrice = 0;
@@ -159,6 +166,14 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   const handleClose = () => setOpen(false);
   const openModal = () => {};
 
+  // basket length
+  const [basketLength, setBasketLength] = useState(0);
+
+  useEffect(() => {
+    const totalAmount = basket.reduce((total, item) => total + item.amount, 0);
+    setBasketLength(totalAmount);
+  }, [basket]);
+
   return (
     <BasketContext.Provider
       value={{
@@ -175,6 +190,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
         deliveryOption,
         handleDeliveryOptionChange,
         emptyBasket,
+        basketLength,
       }}
     >
       {children}
