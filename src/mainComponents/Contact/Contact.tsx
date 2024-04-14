@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.scss";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FormDataType } from "../../types/formData";
+import { FormData } from "../../types/formData";
 
 const Contact: React.FC = () => {
   const [formCorrect, setFormCorrect] = useState(false);
@@ -12,9 +12,9 @@ const Contact: React.FC = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FormDataType>();
+  } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormDataType> = () => {
+  const onSubmit: SubmitHandler<FormData> = () => {
     setFormCorrect(true);
     reset();
   };

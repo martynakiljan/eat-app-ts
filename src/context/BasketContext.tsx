@@ -31,6 +31,7 @@ type ContextType = {
   handleDeliveryOptionChange: (value: string) => void;
   deliveryOption: string;
   basketLength: number;
+  setTotalPrice: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const BasketContext = createContext<ContextType | null>(null);
@@ -38,7 +39,7 @@ const BasketContext = createContext<ContextType | null>(null);
 export const useBasket = () => {
   const context = useContext(BasketContext);
   if (!context) {
-    throw new Error("useBasket musi zostac uzyte wewnatrz BasketProvider");
+    throw new Error("useBasket must be used within BasketProvider.");
   }
   return context;
 };
@@ -46,7 +47,9 @@ export const useBasket = () => {
 export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [basket, setBasket] = useState<BasketItem[]>([]);
+  const initialBasket = JSON.parse(localStorage.getItem("basket") || "[]");
+  const [basket, setBasket] = useState<BasketItem[]>(initialBasket);
+
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const deliveryPrice = 5.9;
 
@@ -146,7 +149,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
       totalPrice += item.price;
     });
 
-    if (deliveryOption === "delivery") {
+    if (basket.length !== 0 && deliveryOption === "delivery") {
       totalPrice += deliveryPrice;
     }
 
@@ -174,6 +177,12 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
     setBasketLength(totalAmount);
   }, [basket]);
 
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+
+    calculateTotalPrice(basket, deliveryOption);
+  }, [basket, deliveryOption, totalPrice]);
+
   return (
     <BasketContext.Provider
       value={{
@@ -191,6 +200,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
         handleDeliveryOptionChange,
         emptyBasket,
         basketLength,
+        setTotalPrice,
       }}
     >
       {children}

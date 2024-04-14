@@ -1,6 +1,6 @@
 /** @format */
 import "./Location.scss";
-import React from "react";
+
 
 const Location = () => {
   return (

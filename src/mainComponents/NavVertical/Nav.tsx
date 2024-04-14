@@ -1,4 +1,5 @@
 /** @format */
+
 import "./Nav.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Order from "../Order/Order";
@@ -16,6 +17,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const { handleOpen, totalPrice, basketLength } = useBasket();
+
   const reloadPage = () => {
     window.location.reload();
   };

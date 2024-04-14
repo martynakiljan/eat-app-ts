@@ -13,6 +13,7 @@ const OrderConfirmation: React.FC<FormDataOrder> = ({
 
   const handleClose = () => {
     window.location.reload();
+    localStorage.clear();
   };
 
   return (

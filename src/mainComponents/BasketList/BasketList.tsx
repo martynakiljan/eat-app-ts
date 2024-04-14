@@ -4,9 +4,9 @@ import { faMinus, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./BasketList.scss";
 import { useBasket } from "../../context/BasketContext";
 import React from "react";
-import { BasketItemTypes } from "../../types/basket";
+import { BasketItem} from "../../types/basket";
 
-const BasketList: React.FC<{ basket: BasketItemTypes[] }> = ({ basket }) => {
+const BasketList: React.FC<{ basket: BasketItem[] }> = ({ basket }) => {
   const { increaseInBasket, decreaseInBasket, removeFromBasket, emptyBasket } =
     useBasket();
 

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import "./FormOrder.scss";
-import { FormDataOrderType } from "../../types/formDataOrder.tsx";
+import { FormDataOrder} from "../../types/formDataOrder.tsx";
 import { useBasket } from "../../context/BasketContext";
 import { SyncLoader } from "react-spinners";
 import OrderConfirmation from "../OrderConfirmation/OrderConfirmation";
@@ -24,7 +24,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormDataOrderType>();
+  } = useForm<FormDataOrder>();
 
   const minOrder = 9;
   const noErrors = Object.keys(errors).length === 0;
@@ -38,7 +38,7 @@ const Form = () => {
     }
   }, [totalPrice, minOrderOK]);
 
-  const onSubmit: SubmitHandler<FormDataOrderType> = (data) => {
+  const onSubmit: SubmitHandler<FormDataOrder> = (data) => {
     if (noErrors || isOrderOK) {
       setFormData(data);
       setIsFormValid(true);
