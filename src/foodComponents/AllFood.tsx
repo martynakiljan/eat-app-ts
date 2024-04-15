@@ -64,14 +64,6 @@ const AllFood: React.FC = () => {
     }
   }, [filteredFood, itemsPerPage, currentPage]);
 
-  const resetFun = () => {
-    setSearchQuery("");
-    setCurrentPage(() => {
-      return 1;
-    });
-
-    console.log(searchQuery);
-  };
 
   useEffect(() => {
     setCurrentPage(1);
@@ -94,7 +86,7 @@ const AllFood: React.FC = () => {
               />
             ))
         ) : (
-          <NoFoodFound resetFun={resetFun} />
+          <NoFoodFound/>
         )}
       </div>
       {isDesktop && (

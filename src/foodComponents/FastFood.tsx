@@ -33,6 +33,7 @@ const FastFood = () => {
           <NoFoodFound />
         )}
       </div>
+      
     </>
   );
 };
