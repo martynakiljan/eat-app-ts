@@ -12,6 +12,7 @@ type ContextType = {
   currentPage: number;
   handleChange: (_event: React.ChangeEvent<unknown>, value: number) => void;
   isDesktop: boolean;
+  setCurrentPage: () => number;
 };
 
 export const PaginationContext = createContext<ContextType | null>(null);
@@ -103,6 +104,7 @@ export const PaginationProvider: React.FC<{
     pageCount,
     filteredFood,
     isDesktop,
+    setCurrentPage,
   };
 
   return (

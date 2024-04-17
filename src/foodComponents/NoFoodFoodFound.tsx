@@ -1,19 +1,20 @@
 /** @format */
 import "../styles/all.scss";
-import { useContext } from "react";
-import { FilterContext } from "../context/FilterContext";
 
 type Props = {
   resetFun?: () => void;
 };
 const NoFoodFound: React.FC<Props> = () => {
-  const { setSearchQuery } = useContext(FilterContext);
-
   const resetFun = () => {
-    setSearchQuery("");
-    setCurrentPage(() => {
-      return 1;
-    });
+    const inputElement = document.querySelector<HTMLInputElement>(
+      ".home__input--input"
+    );
+    if (inputElement) {
+      inputElement.value = "";
+      setTimeout(() => {
+        window.location.reload();
+      }, 200);
+    }
   };
 
   return (
@@ -27,5 +28,3 @@ const NoFoodFound: React.FC<Props> = () => {
 };
 
 export default NoFoodFound;
-
-

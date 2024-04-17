@@ -6,7 +6,7 @@ import { usePagination } from "../context/PaginationContext";
 const PaginationFood = () => {
   const { pageCount, currentPage, handleChange } = usePagination();
 
-  console.log(pageCount);
+
 
   return (
     <div className="pagination">

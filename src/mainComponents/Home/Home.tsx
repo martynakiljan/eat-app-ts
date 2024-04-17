@@ -1,6 +1,6 @@
 /** @format */
 import "./Home.scss";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import NavFood from "../NavFood/NavFood";
 import AllFood from "../../foodComponents/AllFood";
@@ -21,6 +21,7 @@ import { Tile } from "../../types/tile";
 
 const Home = () => {
   const location = useLocation();
+  const { pathname } = useLocation();
   // search //
   const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -42,32 +43,31 @@ const Home = () => {
     setSortValue(value);
   };
 
+  // pass kitchen //
   const currentKitchen = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
   currentKitchen.sort(() => Math.random() - 0.5);
   let filteredFood: Tile[] = [];
 
+
   switch (location.pathname) {
     case "/all-food":
       filteredFood = currentKitchen;
-      console.log(filteredFood);
       break;
     case "/chinese-food":
       filteredFood = chineseKitchen;
-      console.log(filteredFood);
+
       break;
     case "/italian-food":
       filteredFood = italianKitchen;
-      console.log(filteredFood);
+
       break;
     case "/fast-food":
       filteredFood = fastFoodKitchen;
-      console.log(filteredFood);
+
       break;
     default:
       filteredFood = [];
   }
-
-  // all food as filtered food //
 
   return (
     <FilterContext.Provider
@@ -102,7 +102,13 @@ const Home = () => {
         <div className="navfood">
           <div className="home__panel">
             <div className="home__nav">
-              <NavFood />
+              {[
+                "/",
+                "/all-food",
+                "/chinese-food",
+                "/italian-food",
+                "/fast-food",
+              ].includes(pathname) && <NavFood />}
             </div>
           </div>
           <Routes>

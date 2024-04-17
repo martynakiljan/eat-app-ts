@@ -119,17 +119,17 @@ const Contact: React.FC = () => {
           <p className="form__text">Follow us :)</p>
           <u className="form__social">
             <li className="form__li">
-              <a className="form__Link">
+              <a className="form__Link" href="#">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
             </li>
             <li className="form__li">
-              <a className="form__Link">
+              <a className="form__Link" href="#">
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
             </li>
             <li className="form__li">
-              <a className="form__Link">
+              <a className="form__Link" href="#">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </li>

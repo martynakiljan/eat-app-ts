@@ -160,7 +160,7 @@ export const BasketProvider: React.FC<{ children: ReactNode }> = ({
   const removeFromBasket = (itemPrice: number, itemId: number) => {
     setBasket((prevBasket) => prevBasket.filter((item) => item.id !== itemId));
     setTotalPrice((prevTotalPrice) => prevTotalPrice - itemPrice);
-    console.log(totalPrice);
+
   };
 
   //open modal //

@@ -10,21 +10,19 @@ import { Tile } from "../types/tile";
 import { usePagination } from "../context/PaginationContext";
 
 const AllFood = ({ kitchen }: { kitchen: Tile[] }) => {
-  const { sortValue, searchQuery, filteredFood } = useContext(FilterContext);
+  const { sortValue, searchQuery } = useContext(FilterContext);
   const { startIndex, endIndex, isDesktop } = usePagination();
 
-  console.log(kitchen);
   const allFood = filterFunction(
-    filteredFood,
+    kitchen,
     sortValue,
     searchQuery,
     startIndex,
     endIndex
   );
 
-  console.log("all food:");
-  console.log(startIndex, endIndex);
-  console.log(allFood);
+  console.log(kitchen);
+
   return (
     <div>
       <div className="food-panel">
