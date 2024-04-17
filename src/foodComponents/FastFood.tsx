@@ -30,6 +30,7 @@ const FastFood = ({ kitchen }: { kitchen: Tile[] }) => {
           <NoFoodFound />
         )}
       </div>
+      
     </>
   );
 };
