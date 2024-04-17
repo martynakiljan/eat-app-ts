@@ -6,6 +6,7 @@
   @include content-width();
   margin-bottom: 50px;
 
+
   @include md-max {
     display: flex;
     justify-content: center;
@@ -15,8 +16,7 @@
 
   @include md-min {
     margin-left: 0;
-    height: 50vh;
-    margin-right: auto;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -24,6 +24,7 @@
     grid-template-areas:
       ". ."
       ". .";
+
 
   }
 }
@@ -38,6 +39,7 @@
   @include md-min {
     flex-direction: row;
     padding-left: 0;
+
   }
 }
 
@@ -162,4 +164,5 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  width: 100vw;
 }

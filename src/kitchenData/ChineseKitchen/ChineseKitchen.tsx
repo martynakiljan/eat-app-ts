@@ -4,6 +4,7 @@ import chineseImage1 from "../../foodImages/chineseFoodImages/chinesefood1.jpg";
 import chineseImage2 from "../../foodImages/chineseFoodImages/chinesefood2.jpg";
 import chineseImage3 from "../../foodImages/chineseFoodImages/chinesefood3.jpg";
 import chineseImage4 from "../../foodImages/chineseFoodImages/chinesefood4.jpg";
+import chineseImage5 from "../../foodImages/chineseFoodImages/chinesefood5.jpg";
 
 export const chineseKitchen = [
   {
@@ -33,5 +34,12 @@ export const chineseKitchen = [
     description: "Chicken with vegetables and rice",
     price: 19.6,
     src: chineseImage4,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Peking duck",
+    description: "Duck with rice and vegetable",
+    price: 15.6,
+    src: chineseImage5,
   },
 ];

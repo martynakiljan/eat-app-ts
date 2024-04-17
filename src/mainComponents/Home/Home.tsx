@@ -16,8 +16,11 @@ import { chineseKitchen } from "../../kitchenData/ChineseKitchen/ChineseKitchen"
 import { italianKitchen } from "../../kitchenData/ItalianKitchen/ItalianKitchen";
 import { fastFoodKitchen } from "../../kitchenData/FastFoodKitchen/FastFoodKitchen";
 import { PaginationProvider } from "../../context/PaginationContext";
+import { useLocation } from "react-router-dom";
+import { Tile } from "../../types/tile";
 
 const Home = () => {
+  const location = useLocation();
   // search //
   const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -39,8 +42,32 @@ const Home = () => {
     setSortValue(value);
   };
 
+  const currentKitchen = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
+  currentKitchen.sort(() => Math.random() - 0.5);
+  let filteredFood: Tile[] = [];
+
+  switch (location.pathname) {
+    case "/all-food":
+      filteredFood = currentKitchen;
+      console.log(filteredFood);
+      break;
+    case "/chinese-food":
+      filteredFood = chineseKitchen;
+      console.log(filteredFood);
+      break;
+    case "/italian-food":
+      filteredFood = italianKitchen;
+      console.log(filteredFood);
+      break;
+    case "/fast-food":
+      filteredFood = fastFoodKitchen;
+      console.log(filteredFood);
+      break;
+    default:
+      filteredFood = [];
+  }
+
   // all food as filtered food //
-  const filteredFood = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
 
   return (
     <FilterContext.Provider

@@ -27,3 +27,5 @@ const NoFoodFound: React.FC<Props> = () => {
 };
 
 export default NoFoodFound;
+
+

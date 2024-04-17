@@ -1,6 +1,6 @@
 /** @format */
 
-import { useState, useContext, useEffect } from "react";
+import { useContext } from "react";
 import FoodTile from "./FoodTile";
 import { FilterContext } from "../context/FilterContext";
 import { filterFunction } from "../utilis/filterFunction";
@@ -10,36 +10,35 @@ import { Tile } from "../types/tile";
 import { usePagination } from "../context/PaginationContext";
 
 const AllFood = ({ kitchen }: { kitchen: Tile[] }) => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
-  const { sortValue, searchQuery } = useContext(FilterContext);
+  const { sortValue, searchQuery, filteredFood } = useContext(FilterContext);
+  const { startIndex, endIndex, isDesktop } = usePagination();
 
-  const { startIndex, endIndex } = usePagination();
+  console.log(kitchen);
+  const allFood = filterFunction(
+    filteredFood,
+    sortValue,
+    searchQuery,
+    startIndex,
+    endIndex
+  );
 
-  const allFood = filterFunction(kitchen, sortValue, searchQuery);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 992);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+  console.log("all food:");
+  console.log(startIndex, endIndex);
+  console.log(allFood);
   return (
     <div>
       <div className="food-panel">
         {allFood.length !== 0 ? (
-          allFood
-            .slice(startIndex, endIndex)
-            .map(({ id, name, description, price, src }) => (
-              <FoodTile
-                key={id}
-                id={id}
-                name={name}
-                description={description}
-                price={price}
-                src={src}
-              />
-            ))
+          allFood.map(({ id, name, description, price, src }) => (
+            <FoodTile
+              key={id}
+              id={id}
+              name={name}
+              description={description}
+              price={price}
+              src={src}
+            />
+          ))
         ) : (
           <NoFoodFound />
         )}

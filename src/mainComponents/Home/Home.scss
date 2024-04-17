@@ -8,6 +8,7 @@
   height: 30vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 55%;
 }
 
 .home__header--mask {
@@ -154,7 +155,7 @@ svg.fa-magnifying-glass {
   transition: all 0.3s;
 }
 
-.toggleCheckbox:checked + .toggleContainer::before {
+.toggleCheckbox:checked+.toggleContainer::before {
   left: 50%;
 }
 
@@ -168,22 +169,22 @@ svg.fa-magnifying-glass {
   display: none;
 }
 
-.toggleCheckbox:checked + .toggleContainer div:first-child {
+.toggleCheckbox:checked+.toggleContainer div:first-child {
   color: white;
   transition: color 0.3s;
 }
 
-.toggleCheckbox:checked + .toggleContainer div:last-child {
+.toggleCheckbox:checked+.toggleContainer div:last-child {
   color: #343434;
   transition: color 0.3s;
 }
 
-.toggleCheckbox + .toggleContainer div:first-child {
+.toggleCheckbox+.toggleContainer div:first-child {
   color: #343434;
   transition: color 0.3s;
 }
 
-.toggleCheckbox + .toggleContainer div:last-child {
+.toggleCheckbox+.toggleContainer div:last-child {
   color: white;
   transition: color 0.3s;
 }
