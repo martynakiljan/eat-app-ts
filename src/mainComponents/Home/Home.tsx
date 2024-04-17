@@ -39,8 +39,8 @@ const Home = () => {
     setSortValue(value);
   };
 
-  // all food as filtred food //
-  const filtredFood = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
+  // all food as filtered food //
+  const filteredFood = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
 
   return (
     <FilterContext.Provider
@@ -50,7 +50,7 @@ const Home = () => {
           searchQuery,
           handleChangeSort,
           setSearchQuery,
-          filtredFood,
+          filteredFood,
         } as SortAndSearch
       }
     >
@@ -82,7 +82,7 @@ const Home = () => {
             <Route path="/" element={<Navigate to="/AllFood" />} />
             <Route
               path="/all-food"
-              element={<AllFood kitchen={filtredFood} />}
+              element={<AllFood kitchen={filteredFood} />}
             />
             <Route
               path="chinese-food"
