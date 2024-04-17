@@ -22,7 +22,5 @@ export const filterFunction = (
     filteredKitchen.sort((a, b) => b.price - a.price);
   }
 
-  console.log(startIndex, endIndex);
-
   return filteredKitchen.slice(startIndex, endIndex);
 };

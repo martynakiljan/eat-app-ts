@@ -1,6 +1,6 @@
 /** @format */
 import "./Home.scss";
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import NavFood from "../NavFood/NavFood";
 import AllFood from "../../foodComponents/AllFood";
@@ -47,7 +47,6 @@ const Home = () => {
   const currentKitchen = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
   currentKitchen.sort(() => Math.random() - 0.5);
   let filteredFood: Tile[] = [];
-
 
   switch (location.pathname) {
     case "/all-food":
@@ -118,15 +117,15 @@ const Home = () => {
               element={<AllFood kitchen={filteredFood} />}
             />
             <Route
-              path="chinese-food"
+              path="/chinese-food"
               element={<ChineseFood kitchen={chineseKitchen} />}
             />
             <Route
-              path="italian-food"
+              path="/italian-food"
               element={<ItalianFood kitchen={italianKitchen} />}
             />
             <Route
-              path="fast-food"
+              path="/fast-food"
               element={<FastFood kitchen={fastFoodKitchen} />}
             />
           </Routes>

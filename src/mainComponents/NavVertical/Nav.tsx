@@ -37,15 +37,15 @@ const Nav = () => {
           <FontAwesomeIcon icon={faUtensils} />
           INFO
         </NavLink>
-        <NavLink to="/Help" className="nav__item nav-item__q&a">
+        <NavLink to="/help" className="nav__item nav-item__q&a">
           <FontAwesomeIcon icon={faQuestion} />
           Q&A
         </NavLink>
-        <NavLink to="/Contact" className="nav__item nav-item__q&a">
+        <NavLink to="/contact" className="nav__item nav-item__q&a">
           <FontAwesomeIcon icon={faMessage} />
           CONTACT
         </NavLink>
-        <NavLink to="/Location" className="nav__item nav-item__location">
+        <NavLink to="/location" className="nav__item nav-item__location">
           <FontAwesomeIcon icon={faLocationDot} />
           LOCATION
         </NavLink>
