@@ -26,9 +26,9 @@ export const usePagination = () => {
 
 export const PaginationProvider: React.FC<{
   children: React.ReactNode;
-  filteredFood: Tile[];
 }> = ({ children }) => {
   const { searchQuery, filteredFood } = useContext(FilterContext);
+
   console.log(filteredFood);
   const itemsPerPage = 4;
   const pageCount = Math.ceil(filteredFood.length / itemsPerPage);
@@ -76,7 +76,6 @@ export const PaginationProvider: React.FC<{
     filteredFood,
   };
 
-  console.log("Pagination Context:", paginationContext);
 
   return (
     <PaginationContext.Provider value={paginationContext}>

@@ -39,6 +39,7 @@ const Home = () => {
     setSortValue(value);
   };
 
+  // all food as filtred food //
   const filtredFood = chineseKitchen.concat(italianKitchen, fastFoodKitchen);
 
   return (
@@ -50,10 +51,10 @@ const Home = () => {
           handleChangeSort,
           setSearchQuery,
           filtredFood,
-        } as unknown as SortAndSearch
+        } as SortAndSearch
       }
     >
-      <PaginationProvider filteredFood={filtredFood}>
+      <PaginationProvider>
         <header className="home__header">
           <div className="home__header--mask"></div>
           <div className="home__top">
