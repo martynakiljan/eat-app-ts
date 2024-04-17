@@ -12,16 +12,16 @@ const NavFood = () => {
   return (
     <ul className="navfood__list">
       <li className="navfood__link">
-        <NavLink to="/AllFood">All</NavLink>
+        <NavLink to="/all-food">All</NavLink>
       </li>
       <li className="navfood__link">
-        <NavLink to="/ChineseFood">Chinese</NavLink>
+        <NavLink to="/chinese-food">Chinese</NavLink>
       </li>
       <li className="navfood__link">
-        <NavLink to="/ItalianFood">Italian</NavLink>
+        <NavLink to="/italian-food">Italian</NavLink>
       </li>
       <li className="navfood__link">
-        <NavLink to="/FastFood">Fast food</NavLink>
+        <NavLink to="/fast-food">Fast food</NavLink>
       </li>
       <li className="navfood__link navfood__select-input">
         <label className="navfood__select-label">

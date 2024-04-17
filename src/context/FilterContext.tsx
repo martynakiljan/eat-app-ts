@@ -1,6 +1,5 @@
 /** @format */
 
-// FilterContext.tsx
 import { createContext } from "react";
 import { SortAndSearch } from "../types/sortAndSearch";
 

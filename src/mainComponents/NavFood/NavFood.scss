@@ -10,7 +10,7 @@
     padding: 0 20px;
 
     @include md-min {
-        margin: 10px 50px;
+        margin: 0 50px;
         justify-content: flex-start;
         padding: 0;
     }
@@ -62,6 +62,11 @@
 }
 
 .nav__logo {
+
+    @include md-max {
+        display: none;
+    }
+
     background-color: transparent;
     cursor: pointer;
     border: none;

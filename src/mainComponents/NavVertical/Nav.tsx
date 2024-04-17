@@ -28,12 +28,12 @@ const Nav = () => {
         <button className="nav__logo" onClick={reloadPage}>
           <FontAwesomeIcon className="icon" icon={faBowlFood} />
         </button>
-        <NavLink to="/AllFood" className="nav__item nav-item__home">
+        <NavLink to="/all-food" className="nav__item nav-item__home">
           <FontAwesomeIcon icon={faHome} />
           HOME
         </NavLink>
 
-        <NavLink to="/ComingSoon" className="nav__item nav-item__restaurant">
+        <NavLink to="/coming-soon" className="nav__item nav-item__restaurant">
           <FontAwesomeIcon icon={faUtensils} />
           INFO
         </NavLink>

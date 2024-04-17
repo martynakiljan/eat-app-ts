@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  padding-bottom: 10px;
 }
 
 .coming-soon__col {
@@ -28,10 +29,10 @@
 }
 
 .coming-soon__text {
-  padding: 20px;
+  padding: 0 20px;
 
   @include md-min {
-    padding: 50px;
+    padding: 0 50px;
   }
 }
 

@@ -71,3 +71,47 @@
 .form__title {
   margin-bottom: 20px;
 }
+
+.form__container {
+  display: flex;
+  gap: 50px;
+}
+
+.form__subtitle {
+  font-size: 20px;
+}
+
+.form__text {
+  padding: 20px 0;
+}
+
+.form__Link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: $color-main;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+  }
+}
+
+.form__social {
+  display: flex;
+  list-style: none;
+}
+
+.form__li {
+  padding: 0 10px;
+
+  &:nth-of-type(1) {
+    padding-left: 0;
+  }
+}

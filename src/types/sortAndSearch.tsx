@@ -5,4 +5,5 @@ export type SortAndSearch = {
   handleChangeSort: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   sortValue: string;
   setSearchQuery: () => void;
+  filteredFood: [];
 };

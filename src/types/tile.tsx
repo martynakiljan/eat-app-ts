@@ -1,7 +1,7 @@
 /** @format */
 
 export type Tile = {
-  id: number;
+  id: string;
   name: string;
   price: number;
   description?: string;

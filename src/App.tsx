@@ -22,10 +22,10 @@ export default function App() {
           <Home />
           <Routes>
             <Route path="/">
-              <Route path="Contact" element={<Contact />} />
-              <Route path="ComingSoon" element={<ComingSoon />} />
-              <Route path="Help" element={<Help />} />
-              <Route path="Location" element={<Location />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="coming-soon" element={<ComingSoon />} />
+              <Route path="help" element={<Help />} />
+              <Route path="location" element={<Location />} />
             </Route>
           </Routes>
         </div>

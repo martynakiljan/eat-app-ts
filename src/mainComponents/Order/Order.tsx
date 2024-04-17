@@ -38,9 +38,7 @@ const Order = () => {
         <FormOrder />
         <div className="order__price">
           <p className="order__price--text">TOTAL PRICE:</p>
-          <p className="order__price--price">
-            {totalPrice ? totalPrice : 0} CHF
-          </p>
+          <p className="order__price--price">{totalPrice ?? 0} CHF</p>
         </div>
       </div>
     </Popup>

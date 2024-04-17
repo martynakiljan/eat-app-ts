@@ -6,7 +6,7 @@ import { BasketItem } from "../types/basket";
 type ContextType = {
   basket: BasketItem[];
   addToBasket: (
-    id: number,
+    id: string,
     name: string,
     price: number,
     amount?: number

@@ -4,9 +4,9 @@ import italianFoodImage2 from "../../foodImages/italianFoodImages/italianFood2.j
 import italianFoodImage3 from "../../foodImages/italianFoodImages/italianFood3.jpg";
 import italianFoodImage4 from "../../foodImages/italianFoodImages/italianFood4.jpg";
 
-export const ItalianKitchen = [
+export const italianKitchen = [
   {
-    id: 1,
+    id: crypto.randomUUID(),
     name: "Brusketta",
     description:
       "Bruschetta is an antipasto dish made with grilled bread topped with vegetables, grated garlic and a tomato mixture.",
@@ -14,21 +14,21 @@ export const ItalianKitchen = [
     src: italianFoodImage1,
   },
   {
-    id: 2,
+    id: crypto.randomUUID(),
     name: "Focaccia Bread",
     description: "Yeast cake with olives",
     price: 15.6,
     src: italianFoodImage2,
   },
   {
-    id: 3,
+    id: crypto.randomUUID(),
     name: "Pasta Carbonara",
     description: "Spaghetti, egg, parmesan, bacon",
     price: 16.6,
     src: italianFoodImage3,
   },
   {
-    id: 4,
+    id: crypto.randomUUID(),
     name: "Pizza Diavola",
     description: "Tomato sauce, cheese, salami, onion, olives",
     price: 26.6,

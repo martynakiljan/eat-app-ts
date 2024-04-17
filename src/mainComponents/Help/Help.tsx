@@ -1,6 +1,5 @@
 /** @format */
 
-
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -36,8 +35,8 @@ const Help = () => {
             How do I make payment?
           </AccordionSummary>
           <AccordionDetails>
-            You can make payments through several means all supported by the
-            app. Paypal and the rest.
+            You can make payments through several means, all supported by the
+            app, such as PayPal and others.
           </AccordionDetails>
         </Accordion>
         <Accordion defaultExpanded>
@@ -47,7 +46,7 @@ const Help = () => {
             id="panel3-header"
             sx={{ backgroundColor: "#0D9276", color: "#FFFFFF" }}
           >
-            what services do you provide?
+            What services do you provide?
           </AccordionSummary>
           <AccordionDetails>
             We will deliver your order as quickly as possible to the address
