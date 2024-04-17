@@ -111,7 +111,7 @@ const Home = () => {
             </div>
           </div>
           <Routes>
-            <Route path="/" element={<Navigate to="/AllFood" />} />
+            <Route path="/" element={<Navigate to="/all-food" />} />
             <Route
               path="/all-food"
               element={<AllFood kitchen={filteredFood} />}
