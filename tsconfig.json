@@ -20,7 +20,7 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["src", "index.d.ts"],
-	"exclude": ["src/reportWebVitals.js"],
+	"include": ["src", "index.d.ts", "src/reportWebVitals.tsx"],
+	"exclude": ["src/reportWebVitals.tsx"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
