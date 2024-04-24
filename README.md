@@ -14,7 +14,7 @@ What does the app do?
 - pagination
 - food filtering and sorting
 
-🔶 **[Live click]([https://martynakiljan.github.io/new-portfolio-2024/](https://eat-app-6it0aa0tr-martynakiljans-projects.vercel.app/fast-food))**
+🔶🔶🔶  [Live click]([https://martynakiljan.github.io/new-portfolio-2024/](https://eat-app-6it0aa0tr-martynakiljans-projects.vercel.app/fast-food))🔶🔶🔶 
 
 
 What does the application look like?
