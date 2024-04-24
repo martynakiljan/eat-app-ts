@@ -1,6 +1,6 @@
 <h2>Eat App </h2>
 
-🔶 Technologies: REACT, TYPESCRIPT, MUI, NPM, SASS, REACT ROUTER DOM
+🔶 Technologies: REACT, TYPESCRIPT, MUI, SASS, REACT ROUTER DOM
 
 -------
 *A food application that is written using react and typescript*
