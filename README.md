@@ -1,23 +1,37 @@
-in progress...
+<h2>Eat App </h2>
 
-
-<h1> EAT APP  </h1>
+🔶 Technologies: REACT, TYPESCRIPT, MUI, SASS, REACT ROUTER DOM
 
 -------
+*A food application that is written using react and typescript*
 
-🔶 Technologies: REACT, NPM, TYPESCRIPT
+What does the app do?
+- adding food to cart
+- possibility of removing food or adding another piece
+- the price updates automatically
+- after refreshing the page, the basket is not deleted
+- contact form with validation
+- pagination
+- food filtering and sorting
+
+😇 [Live version](https://eat-app-ts-git-main-martynakiljans-projects.vercel.app/all-food)
 
 
-<h3>How to open a file? :eyes: </h3>
+What does the application look like?
 
-* On the right side you will find the "clone or download" button - click it.
-* An item should appear with the "Download ZIP" option - click again.)
-* Now you just need to unpack the downloaded file and open it in your favorite editor.
-* you must enter the appropriate folder (command "cd" + file name)
-* you must to install all packages via *npm install*
-* then you can start *npm start*
+<img width="980" alt="Zrzut ekranu 2024-04-24 o 19 27 21" src="https://github.com/martynakiljan/eat-app-ts/assets/59742201/c76ab9eb-d973-4388-830b-5e1d9167f959">
 
-<img width="1359" alt="Zrzut ekranu 2024-02-28 o 18 59 03" src="https://github.com/martynakiljan/food-app/assets/59742201/478b0bff-1b29-4926-8700-97595df4815e">
-<img width="1249" alt="Zrzut ekranu 2024-03-27 o 18 04 03" src="https://github.com/martynakiljan/food-app/assets/59742201/de7a1609-b25f-4635-bbc5-799adeba9ed4">
-<img width="1408" alt="Zrzut ekranu 2024-03-27 o 18 03 42" src="https://github.com/martynakiljan/food-app/assets/59742201/1e4d7a25-3f7f-4e32-973d-7069db6a9ebe">
-# food-app-TS
+<img width="1065" alt="Zrzut ekranu 2024-04-24 o 19 28 11" src="https://github.com/martynakiljan/eat-app-ts/assets/59742201/ce50149f-e609-44ee-a2f5-29e7ae719383">
+
+<img width="1265" alt="Zrzut ekranu 2024-04-24 o 19 27 48" src="https://github.com/martynakiljan/eat-app-ts/assets/59742201/03e63467-09f4-4774-aadf-d4951d3e7d9a">
+
+<img width="1165" alt="Zrzut ekranu 2024-04-24 o 19 27 35" src="https://github.com/martynakiljan/eat-app-ts/assets/59742201/986e6f2f-ee3c-4bc5-8b35-c129e9193922">
+
+
+Usage
+
+Clone the repository.
+Navigate to the project directory.
+Run npm install to install dependencies.
+Run npm start to start the development server.
+Access the application in your web browser at http://localhost:3000.
