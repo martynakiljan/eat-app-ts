@@ -1,5 +1,4 @@
 {
-	"homepage": "https://martynakiljan.github.io/eat-app-ts/",
 	"name": "eat-app-ts",
 	"private": true,
 	"version": "0.0.0",
@@ -8,8 +7,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview",
-		"deploy": "gh-pages -d dist"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.11.4",
