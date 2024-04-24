@@ -6,14 +6,15 @@
 *A food application that is written using react and typescript*
 
 What does the app do?
-- adding food to cart
-- possibility of removing food or adding another piece
-- the price updates automatically
-- after refreshing the page, the basket is not deleted
-- contact form with validation
-- pagination
-- food filtering and sorting
+💥 adding food to cart
+💥 possibility of removing food or adding another piece
+💥 the price updates automatically
+💥 after refreshing the page, the basket is not deleted
+💥 contact form with validation
+💥 pagination
+💥 food filtering and sorting
 
+😇 [Live version](https://eat-app-ts-git-main-martynakiljans-projects.vercel.app/all-food)
 
 
 What does the application look like?
