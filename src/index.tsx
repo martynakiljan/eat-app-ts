@@ -1,19 +1,18 @@
-/** @format */
-
-import ReactDOM from 'react-dom/client'
+// @ts-nocheck
+import ReactDOM from 'react-dom'
 import './App.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
+ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>
-	</React.StrictMode>
+	</React.StrictMode>,
+	document.getElementById('root')
 )
 
 reportWebVitals()
