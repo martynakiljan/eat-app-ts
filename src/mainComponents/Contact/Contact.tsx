@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+     reset,
   } = useForm<FormData>();
 
   const onSubmit: SubmitHandler<FormData> = () => {

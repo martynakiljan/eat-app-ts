@@ -2,11 +2,11 @@
 
 .coming-soon__container {
   display: flex;
-  flex-direction: column;
+    flex-direction: column;
 
   @include md-min {
-    flex-direction: row;
-  }
+           flex-direction: row;
+  }  
 }
 
 .coming-soon__img {

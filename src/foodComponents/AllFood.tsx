@@ -21,7 +21,6 @@ const AllFood = ({ kitchen }: { kitchen: Tile[] }) => {
     endIndex
   );
 
-  console.log(kitchen);
 
   return (
     <div>

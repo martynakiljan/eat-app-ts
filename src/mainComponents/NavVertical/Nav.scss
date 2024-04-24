@@ -1,111 +1,111 @@
-@import "../../styles/all.scss";
+@import '../../styles/all.scss';
 
 .nav {
-    position: sticky;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: auto;
-    background-color: $color-main;
-    padding: 0 20px;
+	position: sticky;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: auto;
+	background-color: $color-main;
+	padding: 0 20px;
 
-    @include md-min {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0 50px;
-    }
+	@include md-min {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 0 50px;
+	}
 }
 
 .navfood {
-    height: 100%;
+	height: 100%;
 }
 
 .nav__icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0 auto;
 
-
-
-    @include md-min {
-
-        height: 10vh;
-        margin-left: 0;
-        margin-right: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        width: 60%;
-    }
+	@include md-min {
+		height: 10vh;
+		margin-left: 0;
+		margin-right: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		width: 60%;
+	}
 }
 
 .svg-inline--fa {
-    text-decoration: none;
-    background-color: transparent;
-    color: $color-bg;
-    width: 10px;
-    height: 10px;
-    text-align: center;
-    padding-right: 10px;
+	text-decoration: none;
+	background-color: transparent;
+	color: $color-bg;
+	width: 10px;
+	height: 10px;
+	text-align: center;
+	padding-right: 10px;
 
-    .foodTile & {
-        padding: 0;
-    }
+	.form__social & {
+		padding: 0;
+	}
 
-    @include md-min {
-        padding: 0 10px;
-    }
+	.foodTile & {
+		padding: 0;
+	}
 
+	@include md-min {
+		padding: 0 10px;
+	}
 }
 
 .fa-bowl-food {
-    display: none;
-    color: $color-dark-blue;
-    width: 45px;
-    height: 45px;
+	display: none;
+	color: $color-dark-blue;
+	width: 45px;
+	height: 45px;
 
-    @include md-min {
-        display: block;
-    }
+	@include md-min {
+		display: block;
+	}
 }
 
 .svg-inline--fa {
-    .active & {
-        color: $color-dark-blue;
-    }
+	.active & {
+		color: $color-dark-blue;
+	}
 }
 
 .nav__item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    list-style: none;
-    color: $color-bg;
-    padding: 10px 0;
-    font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	list-style: none;
+	color: $color-bg;
+	padding: 10px 0;
+	font-size: 12px;
 
-    &:hover {
-        color: $color-dark-blue;
+	&:hover {
+		color: $color-dark-blue;
 
-        svg {
-            color: $color-dark-blue;
-        }
-    }
+		svg {
+			color: $color-dark-blue;
+		}
+	}
 
-    &.active {
-        color: $color-dark-blue;
-        font-weight: bold;
-    }
+	&.active {
+		color: $color-dark-blue;
+		font-weight: bold;
+	}
 
-    @include md-min {
-        padding: 0 10px;
-    }
+	@include md-min {
+		padding: 0 10px;
+	}
 }

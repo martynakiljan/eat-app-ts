@@ -10,7 +10,7 @@
 .form__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+    justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -74,7 +74,13 @@
 
 .form__container {
   display: flex;
+  flex-direction: column;
   gap: 50px;
+
+  @include md-min {
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 
 .form__subtitle {
@@ -110,7 +116,7 @@
 }
 
 .form__li {
-  padding: 0 10px;
+    padding: 0 10px;
 
   &:nth-of-type(1) {
     padding-left: 0;

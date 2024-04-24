@@ -1,10 +1,10 @@
 /** @format */
 
-import chineseImage1 from "../../foodImages/chineseFoodImages/chinesefood1.jpg";
-import chineseImage2 from "../../foodImages/chineseFoodImages/chinesefood2.jpg";
-import chineseImage3 from "../../foodImages/chineseFoodImages/chinesefood3.jpg";
-import chineseImage4 from "../../foodImages/chineseFoodImages/chinesefood4.jpg";
-import chineseImage5 from "../../foodImages/chineseFoodImages/chinesefood5.jpg";
+import chineseImage1 from "../../foodImages/chineseFoodImages/chinesefood1.png";
+import chineseImage2 from "../../foodImages/chineseFoodImages/chinesefood2.png";
+import chineseImage3 from "../../foodImages/chineseFoodImages/chinesefood3.png";
+import chineseImage4 from "../../foodImages/chineseFoodImages/chinesefood4.png";
+import chineseImage5 from "../../foodImages/chineseFoodImages/chinesefood5.png";
 
 export const chineseKitchen = [
   {

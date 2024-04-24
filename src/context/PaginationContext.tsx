@@ -1,10 +1,18 @@
 /** @format */
 
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import { FilterContext } from "./FilterContext";
+import { Tile } from "../types/tile";
 
 type ContextType = {
-  filteredFood: [];
+  filteredFood: Tile[];
   startIndex: number;
   endIndex: number;
   pageCount: number;
@@ -12,7 +20,7 @@ type ContextType = {
   currentPage: number;
   handleChange: (_event: React.ChangeEvent<unknown>, value: number) => void;
   isDesktop: boolean;
-  setCurrentPage: () => number;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
 };
 
 export const PaginationContext = createContext<ContextType | null>(null);
@@ -50,21 +58,17 @@ export const PaginationProvider: React.FC<{
   }, [currentPage, endIndex, filteredFood, itemsPerPage, startIndex]);
 
   useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, filteredFood]);
+
+  useEffect(() => {
     const newPageCount = Math.ceil(filteredFood.length / itemsPerPage);
     setMaxPage(newPageCount);
-
-    if (currentPage > newPageCount) {
-      setCurrentPage(newPageCount);
-    }
   }, [filteredFood, itemsPerPage, currentPage]);
 
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
   };
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery]);
 
   // hide pagination for mobile //
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);

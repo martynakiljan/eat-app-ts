@@ -86,14 +86,24 @@ const Home = () => {
           <div className="home__top">
             <h1 className="home__title">Are you hungry?</h1>
             <div className="home__input">
-              <div className="home__input__icon">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-              </div>
-              <input
-                className="home__input--input"
-                placeholder="Search food..."
-                onChange={handleSearchChange}
-              ></input>
+              {[
+                "/all-food",
+                "/chinese-food",
+                     "/italian-food",
+                "/fast-food",
+              ].includes(pathname) && (
+                  <>
+                    <label className="home__label--label">Search food:</label>
+                    <div className="home__label">
+                      <FontAwesomeIcon icon={faMagnifyingGlass} />
+                      <input
+                        className="home__input--input"
+                        placeholder="burger..."
+                        onChange={handleSearchChange}
+                      />
+                    </div>
+                  </>
+                )}
             </div>
           </div>
         </header>

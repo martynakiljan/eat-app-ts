@@ -1,1 +1,3 @@
-declare module "*.jpg";
+/** @format */
+
+declare module "*.png";

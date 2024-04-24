@@ -1,11 +1,10 @@
 /** @format */
-import italianFoodImage1 from "../../foodImages/italianFoodImages/italianFood1.jpg";
-import italianFoodImage2 from "../../foodImages/italianFoodImages/italianFood2.jpg";
-import italianFoodImage3 from "../../foodImages/italianFoodImages/italianFood3.jpg";
-import italianFoodImage4 from "../../foodImages/italianFoodImages/italianFood4.jpg";
-import italianFoodImage5 from "../../foodImages/italianFoodImages/italianFood5.jpg";
-import italianFoodImage6 from "../../foodImages/italianFoodImages/italianFood6.jpg";
-import italianFoodImage7 from "../../foodImages/italianFoodImages/italianFood7.jpg";
+import italianFoodImage1 from "../../foodImages/italianFoodImages/italianFood1.png";
+import italianFoodImage2 from "../../foodImages/italianFoodImages/italianFood2.png";
+import italianFoodImage3 from "../../foodImages/italianFoodImages/italianFood3.png";
+import italianFoodImage4 from "../../foodImages/italianFoodImages/italianFood4.png";
+import italianFoodImage5 from "../../foodImages/italianFoodImages/italianFood5.png";
+import italianFoodImage6 from "../../foodImages/italianFoodImages/italianFood6.png";
 
 export const italianKitchen = [
   {
@@ -50,12 +49,5 @@ export const italianKitchen = [
     description: "with chicken and spinat",
     price: 12.1,
     src: italianFoodImage6,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "Caprese",
-    description: "tomate and mozarella",
-    price: 10.9,
-    src: italianFoodImage7,
-  },
+  }
 ];
