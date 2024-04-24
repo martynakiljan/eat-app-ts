@@ -14,7 +14,7 @@ What does the app do?
 - pagination
 - food filtering and sorting
 
-💁🏼‍♀️  [LIVE CLICK](https://pages.github.com/](https://eat-app-6it0aa0tr-martynakiljans-projects.vercel.app/fast-food) 💁🏼‍♀️ 
+💁🏼‍♀️  [LIVE CLICK]([https://pages.github.com/](https://eat-app-6it0aa0tr-martynakiljans-projects.vercel.app/fast-food](https://eat-app-6it0aa0tr-martynakiljans-projects.vercel.app/all-food)) 💁🏼‍♀️ 
 
 
 What does the application look like?
